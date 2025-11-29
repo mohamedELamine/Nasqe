@@ -11,9 +11,9 @@
 <?php wp_body_open(); ?>
 
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'nasaq' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'تخطى إلى المحتوى', 'nasaq' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" role="banner" aria-label="<?php esc_attr_e( 'الترويسة الرئيسية', 'nasaq' ); ?>">
 		<div class="header-wrapper">
 			<div class="container">
 				<div class="header-inner">
@@ -24,8 +24,8 @@
 							the_custom_logo();
 						} else {
 							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-text">
-								<div class="logo-icon">ن</div>
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-text" aria-label="<?php esc_attr_e( 'الصفحة الرئيسية', 'nasaq' ); ?>">
+								<div class="logo-icon" aria-hidden="true">ن</div>
 								<span class="site-title"><?php bloginfo( 'name' ); ?></span>
 							</a>
 							<?php
@@ -34,7 +34,7 @@
 					</div>
 
 					<!-- Desktop Navigation -->
-					<nav id="site-navigation" class="main-navigation desktop-nav">
+					<nav id="site-navigation" class="main-navigation desktop-nav" role="navigation" aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'nasaq' ); ?>">
 						<?php
 						wp_nav_menu(
 							array(
@@ -50,21 +50,22 @@
 
 					<!-- CTA Button (Desktop) -->
 					<div class="header-cta desktop-cta">
-						<a href="#contact" class="btn btn-secondary">احصل على عرض سعر</a>
+						<a href="#contact" class="btn btn-secondary"><?php esc_html_e( 'احصل على عرض سعر', 'nasaq' ); ?></a>
 					</div>
 
 					<!-- Mobile Menu Toggle -->
-					<button class="mobile-menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
-						<span class="menu-icon">
+					<button class="mobile-menu-toggle" aria-label="<?php esc_attr_e( 'فتح القائمة', 'nasaq' ); ?>" aria-expanded="false" aria-controls="mobile-navigation">
+						<span class="menu-icon" aria-hidden="true">
 							<span></span>
 							<span></span>
 							<span></span>
 						</span>
+						<span class="screen-reader-text"><?php esc_html_e( 'القائمة', 'nasaq' ); ?></span>
 					</button>
 				</div>
 
 				<!-- Mobile Navigation -->
-				<nav class="mobile-nav">
+				<nav id="mobile-navigation" class="mobile-nav" role="navigation" aria-label="<?php esc_attr_e( 'القائمة المتحركة', 'nasaq' ); ?>">
 					<?php
 					wp_nav_menu(
 						array(
@@ -76,7 +77,7 @@
 						)
 					);
 					?>
-					<a href="#contact" class="btn btn-secondary mobile-cta">احصل على عرض سعر</a>
+					<a href="#contact" class="btn btn-secondary mobile-cta"><?php esc_html_e( 'احصل على عرض سعر', 'nasaq' ); ?></a>
 				</nav>
 			</div>
 		</div>

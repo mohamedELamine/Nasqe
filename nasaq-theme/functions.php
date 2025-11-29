@@ -69,13 +69,18 @@ add_action( 'after_setup_theme', 'nasaq_content_width', 0 );
  * Enqueue scripts and styles
  */
 function nasaq_scripts() {
-	// Google Fonts - Cairo
-	wp_enqueue_style(
-		'nasaq-google-fonts',
-		'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap',
-		array(),
-		null
-	);
+	// Google Fonts - Dynamic font loading based on Customizer selection
+	$font_family = get_theme_mod( 'nasaq_font_family', 'Cairo' );
+	$font_url = nasaq_get_google_font_url( $font_family );
+
+	if ( $font_url ) {
+		wp_enqueue_style(
+			'nasaq-google-fonts',
+			$font_url,
+			array(),
+			null
+		);
+	}
 
 	// Main stylesheet
 	wp_enqueue_style(
@@ -106,6 +111,26 @@ function nasaq_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'nasaq_scripts' );
+
+/**
+ * Get Google Font URL for selected font
+ */
+function nasaq_get_google_font_url( $font_family ) {
+	$fonts_urls = array(
+		'Cairo'                => 'https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap',
+		'Tajawal'              => 'https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap',
+		'Almarai'              => 'https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap',
+		'Noto Sans Arabic'     => 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&display=swap',
+		'IBM Plex Sans Arabic' => 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap',
+		'Amiri'                => 'https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap',
+		'Lalezar'              => 'https://fonts.googleapis.com/css2?family=Lalezar&display=swap',
+		'Harmattan'            => 'https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap',
+		'Changa'               => 'https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap',
+		'Reem Kufi'            => 'https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&display=swap',
+	);
+
+	return isset( $fonts_urls[ $font_family ] ) ? $fonts_urls[ $font_family ] : $fonts_urls['Cairo'];
+}
 
 /**
  * Include required files

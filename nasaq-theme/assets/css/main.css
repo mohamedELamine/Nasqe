@@ -787,3 +787,132 @@ p {
 	white-space: nowrap;
 	border-width: 0;
 }
+
+.screen-reader-text:focus {
+	position: static;
+	width: auto;
+	height: auto;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
+	background-color: var(--white);
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+	font-weight: 700;
+	z-index: 100000;
+}
+
+/* ==========================================================================
+   13. Accessibility Enhancements
+   ========================================================================== */
+
+/* Skip to content link */
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--primary-color);
+	color: var(--white);
+	padding: 1rem 2rem;
+	border-radius: var(--radius-md);
+	font-weight: 700;
+	text-decoration: none;
+	z-index: 100000;
+	transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+	top: 1rem;
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 3px;
+}
+
+/* Enhanced focus states */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 2px;
+}
+
+.btn:focus {
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 3px;
+	box-shadow: 0 0 0 5px rgba(255, 140, 66, 0.2);
+}
+
+/* Focus visible (for keyboard navigation only) */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+	outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 2px;
+}
+
+/* Keyboard navigation enhancement */
+.nav-menu a:focus,
+.mobile-menu a:focus {
+	background-color: rgba(255, 140, 66, 0.1);
+	outline: 2px solid var(--secondary-color);
+	outline-offset: 0;
+}
+
+.mobile-menu-toggle:focus {
+	outline: 3px solid var(--secondary-color);
+	outline-offset: 3px;
+}
+
+/* Improve contrast for better readability */
+::selection {
+	background-color: var(--secondary-color);
+	color: var(--white);
+}
+
+::-moz-selection {
+	background-color: var(--secondary-color);
+	color: var(--white);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.btn {
+		border: 2px solid currentColor;
+	}
+
+	.service-card,
+	.portfolio-item,
+	.testimonial-card,
+	.pricing-card {
+		border: 2px solid var(--dark-gray);
+	}
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+	/* This can be implemented if needed */
+}
