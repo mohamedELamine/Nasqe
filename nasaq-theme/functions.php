@@ -137,6 +137,7 @@ function nasaq_get_google_font_url( $font_family ) {
  */
 require_once get_template_directory() . '/inc/widgets.php';
 require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/demo-content.php';
 
 /**
  * Add body classes for RTL support
