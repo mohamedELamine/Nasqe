@@ -1,0 +1,20 @@
+/*
+Theme Name: Nasaq Theme
+Theme URI: https://nasaq.dev
+Author: Nasaq Software Solutions
+Author URI: https://nasaq.dev
+Description: قالب ووردبريس كامل (Block Theme / FSE) لموقع نسق للحلول البرمجية - تصميم احترافي مع دعم RTL كامل للعربية
+Version: 1.0.0
+Requires at least: 6.1
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nasaq
+Tags: block-theme, full-site-editing, rtl-language-support, custom-colors, custom-menu, featured-images, threaded-comments, translation-ready, wide-blocks
+*/
+
+/*
+ * هذا الملف يحتوي فقط على معلومات القالب.
+ * الأنماط الفعلية موجودة في theme.json و assets/css/theme.css
+ */

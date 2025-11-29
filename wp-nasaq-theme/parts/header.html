@@ -1,0 +1,60 @@
+<!-- wp:group {"align":"full","style":{"position":{"type":"sticky","top":"0px"},"spacing":{"padding":{"top":"1.25rem","bottom":"1.25rem"}}},"backgroundColor":"white","className":"site-header","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull site-header has-white-background-color has-background" style="padding-top:1.25rem;padding-bottom:1.25rem;position:sticky;top:0px;z-index:999;box-shadow:0 1px 3px rgba(0,0,0,0.1);backdrop-filter:blur(8px);background:rgba(255,255,255,0.95)">
+
+	<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
+	<div class="wp-block-group">
+
+		<!-- Logo -->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","orientation":"horizontal"}} -->
+		<div class="wp-block-group" style="gap:0.75rem;cursor:pointer">
+			<!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|white"}}},"spacing":{"padding":{"top":"0.75rem","right":"0.75rem","bottom":"0.75rem","left":"0.75rem"}}},"backgroundColor":"primary-dark-green","fontSize":"x-large"} -->
+			<p class="has-primary-dark-green-background-color has-background has-link-color has-x-large-font-size" style="padding-top:0.75rem;padding-right:0.75rem;padding-bottom:0.75rem;padding-left:0.75rem;border-radius:12px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 6px rgba(0,0,0,0.1)"><strong>ن</strong></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:site-title {"level":0,"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"}},"textColor":"primary-dark-green"} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Desktop Navigation -->
+		<!-- wp:navigation {"ref":4,"textColor":"text-gray","overlayMenu":"never","layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"2rem"}},"className":"desktop-nav"} /-->
+
+		<!-- CTA Button (Desktop) -->
+		<!-- wp:buttons {"className":"desktop-cta"} -->
+		<div class="wp-block-buttons desktop-cta">
+			<!-- wp:button {"backgroundColor":"secondary-orange","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"1rem","right":"2.25rem","bottom":"1rem","left":"2.25rem"}}}} -->
+			<div class="wp-block-button"><a class="wp-block-button__link has-secondary-orange-background-color has-background wp-element-button" href="#contact" style="border-radius:12px;padding-top:1rem;padding-right:2.25rem;padding-bottom:1rem;padding-left:2.25rem">احصل على عرض سعر</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+		<!-- Mobile Menu Toggle -->
+		<!-- wp:html -->
+		<button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="فتح القائمة">
+			<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<line x1="3" y1="12" x2="21" y2="12"></line>
+				<line x1="3" y1="6" x2="21" y2="6"></line>
+				<line x1="3" y1="18" x2="21" y2="18"></line>
+			</svg>
+		</button>
+		<!-- /wp:html -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- Mobile Navigation -->
+	<!-- wp:group {"className":"mobile-nav","style":{"spacing":{"padding":{"top":"1.5rem","bottom":"1.5rem"},"margin":{"top":"1.5rem"}},"border":{"top":{"color":"var:preset|color|border-gray","width":"1px"}}},"layout":{"type":"constrained"}} -->
+	<div class="wp-block-group mobile-nav" style="border-top-color:var(--wp--preset--color--border-gray);border-top-width:1px;margin-top:1.5rem;padding-top:1.5rem;padding-bottom:1.5rem;display:none">
+		<!-- wp:navigation {"ref":4,"orientation":"vertical","textColor":"text-gray","overlayMenu":"never","layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"1rem"}}} /-->
+
+		<!-- wp:buttons -->
+		<div class="wp-block-buttons" style="margin-top:1rem">
+			<!-- wp:button {"backgroundColor":"secondary-orange","width":100,"style":{"border":{"radius":"12px"}}} -->
+			<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-secondary-orange-background-color has-background wp-element-button" href="#contact" style="border-radius:12px">احصل على عرض سعر</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+	</div>
+	<!-- /wp:group -->
+
+</div>
+<!-- /wp:group -->

@@ -1,0 +1,85 @@
+/**
+ * RTL Stylesheet for Nasaq Theme
+ *
+ * دعم كامل للغة العربية والاتجاه من اليمين لليسار
+ */
+
+/* === Base RTL === */
+body {
+	direction: rtl;
+	text-align: right;
+}
+
+/* === Flex Direction Reversals === */
+.wp-block-columns,
+.wp-block-group.is-layout-flex {
+	flex-direction: row-reverse;
+}
+
+/* === Text Alignment === */
+.has-text-align-left {
+	text-align: right !important;
+}
+
+.has-text-align-right {
+	text-align: left !important;
+}
+
+/* === Spacing Adjustments === */
+.wp-block-group > * + * {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+/* === Navigation === */
+.wp-block-navigation ul {
+	flex-direction: row-reverse;
+}
+
+/* === Buttons === */
+.wp-block-buttons {
+	flex-direction: row-reverse;
+}
+
+/* === Lists === */
+ul, ol {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* === Forms === */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+	text-align: right;
+	direction: rtl;
+}
+
+/* === Arrows and Icons === */
+.arrow-left {
+	transform: scaleX(-1);
+}
+
+/* === Mobile Menu === */
+@media (max-width: 768px) {
+	.mobile-nav {
+		text-align: right;
+	}
+}
+
+/* === Testimonials === */
+.testimonial-card {
+	text-align: right;
+}
+
+/* === Footer === */
+.wp-block-social-links {
+	flex-direction: row-reverse;
+}
+
+/* === Misc === */
+.has-text-align-center {
+	text-align: center !important;
+}

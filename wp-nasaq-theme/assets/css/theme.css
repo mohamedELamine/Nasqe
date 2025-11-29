@@ -1,0 +1,249 @@
+/**
+ * Nasaq Theme - Additional Styles
+ *
+ * هذا الملف يحتوي على أنماط إضافية لتحسين التجربة
+ * الأنماط الأساسية موجودة في theme.json
+ */
+
+/* === RTL Support === */
+html[dir="rtl"] body {
+	direction: rtl;
+	text-align: right;
+}
+
+/* === Mobile Menu Styles === */
+.mobile-menu-toggle {
+	display: none;
+	background: none;
+	border: none;
+	color: #1a4d3e;
+	cursor: pointer;
+	padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.mobile-menu-toggle {
+		display: block;
+	}
+
+	.desktop-nav,
+	.desktop-cta {
+		display: none;
+	}
+
+	.mobile-nav.active {
+		display: block !important;
+	}
+}
+
+@media (min-width: 769px) {
+	.mobile-nav {
+		display: none !important;
+	}
+}
+
+/* === Service Cards Hover === */
+.service-card {
+	transition: all 0.3s ease;
+}
+
+.service-card:hover {
+	border-color: #1a4d3e !important;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* === Portfolio Cards Hover === */
+.portfolio-card {
+	transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.portfolio-card img {
+	transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+	transform: scale(1.1);
+}
+
+/* === Pricing Cards === */
+.pricing-card {
+	transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.pricing-card.featured {
+	transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+	.pricing-card.featured {
+		transform: scale(1);
+	}
+}
+
+/* === Buttons === */
+button,
+.wp-block-button__link {
+	transition: all 0.3s ease;
+}
+
+button:hover,
+.wp-block-button__link:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* === Smooth Scroll === */
+html {
+	scroll-behavior: smooth;
+}
+
+/* === Form Inputs === */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+	transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	border-color: #1a4d3e !important;
+	box-shadow: 0 0 0 3px rgba(26, 77, 62, 0.1);
+}
+
+/* === Container Utilities === */
+.container-custom {
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+@media (max-width: 768px) {
+	.container-custom {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+}
+
+/* === Section Spacing === */
+.section-spacing {
+	padding-top: 7.5rem;
+	padding-bottom: 7.5rem;
+}
+
+@media (max-width: 768px) {
+	.section-spacing {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+}
+
+/* === Typography Enhancements === */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+}
+
+p, li, span, a, button, input, textarea, select {
+	font-family: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+}
+
+/* === Link Animations === */
+a {
+	transition: all 0.3s ease;
+}
+
+/* === Responsive Images === */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* === Pricing Features List === */
+.pricing-features li {
+	transition: all 0.2s ease;
+}
+
+.pricing-features li:hover {
+	transform: translateX(-4px);
+}
+
+/* === Mobile Responsive Adjustments === */
+@media (max-width: 768px) {
+	h1 {
+		font-size: 1.875rem !important;
+	}
+
+	h2 {
+		font-size: 1.5rem !important;
+	}
+
+	h3 {
+		font-size: 1.25rem !important;
+	}
+
+	.section-spacing {
+		padding-top: 3.5rem;
+		padding-bottom: 3.5rem;
+	}
+}
+
+/* === Badge Styles === */
+.badge {
+	display: inline-block;
+	background: #f8f9fa;
+	color: #1a4d3e;
+	padding: 0.5rem 1.25rem;
+	border-radius: 9999px;
+	font-size: 0.875rem;
+}
+
+/* === Card Shadows === */
+.card-shadow-sm {
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-md {
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-lg {
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-xl {
+	box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow-2xl {
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* === Accessibility === */
+*:focus-visible {
+	outline: 2px solid #1a4d3e;
+	outline-offset: 2px;
+}
+
+/* === Print Styles === */
+@media print {
+	header,
+	footer,
+	.no-print {
+		display: none !important;
+	}
+}
