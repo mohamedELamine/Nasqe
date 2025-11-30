@@ -14,6 +14,17 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Register Widget Areas
  */
 function nasaq_widgets_init() {
+	// Header Section
+	register_sidebar( array(
+		'name'          => __( 'Header Section', 'nasaq' ),
+		'id'            => 'header_section',
+		'description'   => __( 'Widgets in this area will appear in the header (CTA buttons, search, etc).', 'nasaq' ),
+		'before_widget' => '<div id="%1$s" class="header-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="header-widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
 	// Hero Section
 	register_sidebar( array(
 		'name'          => __( 'Hero Section', 'nasaq' ),

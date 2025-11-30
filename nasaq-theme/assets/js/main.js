@@ -12,31 +12,45 @@
      */
     function initMobileMenu() {
         const mobileToggle = $('.mobile-menu-toggle');
-        const mobileNav = $('.mobile-nav');
+        const mobileMenuWrapper = $('.mobile-menu-wrapper');
         const body = $('body');
 
-        if (mobileToggle.length && mobileNav.length) {
+        if (mobileToggle.length && mobileMenuWrapper.length) {
             mobileToggle.on('click', function(e) {
                 e.preventDefault();
+                const isActive = $(this).hasClass('active');
+
                 $(this).toggleClass('active');
-                mobileNav.toggleClass('active');
+                mobileMenuWrapper.toggleClass('active');
                 body.toggleClass('menu-open');
+
+                // Update ARIA attributes
+                $(this).attr('aria-expanded', !isActive);
             });
 
             // Close menu when clicking outside
             $(document).on('click', function(e) {
-                if (!$(e.target).closest('.main-navigation, .mobile-menu-toggle').length) {
-                    mobileToggle.removeClass('active');
-                    mobileNav.removeClass('active');
+                if (!$(e.target).closest('.mobile-menu-wrapper, .mobile-menu-toggle').length) {
+                    mobileToggle.removeClass('active').attr('aria-expanded', 'false');
+                    mobileMenuWrapper.removeClass('active');
                     body.removeClass('menu-open');
                 }
             });
 
             // Close menu when clicking on a link
-            mobileNav.find('a').on('click', function() {
-                mobileToggle.removeClass('active');
-                mobileNav.removeClass('active');
+            mobileMenuWrapper.find('a').on('click', function() {
+                mobileToggle.removeClass('active').attr('aria-expanded', 'false');
+                mobileMenuWrapper.removeClass('active');
                 body.removeClass('menu-open');
+            });
+
+            // Close on ESC key
+            $(document).on('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenuWrapper.hasClass('active')) {
+                    mobileToggle.removeClass('active').attr('aria-expanded', 'false');
+                    mobileMenuWrapper.removeClass('active');
+                    body.removeClass('menu-open');
+                }
             });
         }
     }
@@ -54,7 +68,7 @@
 
                 if (target.length) {
                     e.preventDefault();
-                    const offset = $('#masthead').outerHeight() || 0;
+                    const offset = $('.nasaq-header').outerHeight() || 90;
 
                     $('html, body').animate({
                         scrollTop: target.offset().top - offset
@@ -68,7 +82,7 @@
      * Header Scroll Effect
      */
     function initHeaderScroll() {
-        const header = $('#masthead');
+        const header = $('.nasaq-header');
         let lastScrollTop = 0;
 
         if (header.length) {

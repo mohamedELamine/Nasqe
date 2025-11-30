@@ -11,76 +11,118 @@
 <?php wp_body_open(); ?>
 
 <div id="page" class="site">
+	<!-- Skip to Content Link for Accessibility -->
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'تخطى إلى المحتوى', 'nasaq' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner" aria-label="<?php esc_attr_e( 'الترويسة الرئيسية', 'nasaq' ); ?>">
-		<div class="header-wrapper">
-			<div class="container">
-				<div class="header-inner">
-					<!-- Logo -->
-					<div class="site-branding">
-						<?php
-						if ( has_custom_logo() ) {
-							the_custom_logo();
-						} else {
-							?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-text" aria-label="<?php esc_attr_e( 'الصفحة الرئيسية', 'nasaq' ); ?>">
-								<div class="logo-icon" aria-hidden="true">ن</div>
-								<span class="site-title"><?php bloginfo( 'name' ); ?></span>
-							</a>
-							<?php
-						}
-						?>
-					</div>
+	<!-- Main Header -->
+	<header id="site-header" class="nasaq-header" role="banner">
+		<div class="container">
+			<div class="header-content">
 
-					<!-- Desktop Navigation -->
-					<nav id="site-navigation" class="main-navigation desktop-nav" role="navigation" aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'nasaq' ); ?>">
+				<!-- Logo Area (Left in RTL) -->
+				<div class="site-branding">
+					<?php
+					if ( has_custom_logo() ) {
+						the_custom_logo();
+					} else {
+						?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo-link" rel="home">
+							<div class="logo-icon" aria-hidden="true">ن</div>
+							<span class="site-title"><?php bloginfo( 'name' ); ?></span>
+						</a>
 						<?php
+					}
+
+					$nasaq_description = get_bloginfo( 'description', 'display' );
+					if ( $nasaq_description || is_customize_preview() ) :
+						?>
+						<p class="site-description screen-reader-text"><?php echo $nasaq_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<?php endif; ?>
+				</div>
+
+				<!-- Navigation Menu (Center) -->
+				<nav id="primary-navigation" class="primary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'nasaq' ); ?>">
+					<?php
+					if ( has_nav_menu( 'primary' ) ) {
 						wp_nav_menu(
 							array(
 								'theme_location' => 'primary',
 								'menu_id'        => 'primary-menu',
-								'container'      => false,
 								'menu_class'     => 'nav-menu',
-								'fallback_cb'    => '__return_false',
+								'container'      => false,
+								'fallback_cb'    => false,
+								'depth'          => 2,
 							)
 						);
+					}
+					?>
+				</nav>
+
+				<!-- Header Widget Area (Right in RTL) -->
+				<div class="header-widgets">
+					<?php
+					if ( is_active_sidebar( 'header_section' ) ) {
+						dynamic_sidebar( 'header_section' );
+					} else {
+						// Default CTA if no widgets
 						?>
-					</nav>
-
-					<!-- CTA Button (Desktop) -->
-					<div class="header-cta desktop-cta">
-						<a href="#contact" class="btn btn-secondary"><?php esc_html_e( 'احصل على عرض سعر', 'nasaq' ); ?></a>
-					</div>
-
-					<!-- Mobile Menu Toggle -->
-					<button class="mobile-menu-toggle" aria-label="<?php esc_attr_e( 'فتح القائمة', 'nasaq' ); ?>" aria-expanded="false" aria-controls="mobile-navigation">
-						<span class="menu-icon" aria-hidden="true">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-						<span class="screen-reader-text"><?php esc_html_e( 'القائمة', 'nasaq' ); ?></span>
-					</button>
+						<a href="#contact" class="btn btn-primary header-cta">
+							<?php esc_html_e( 'احصل على عرض سعر', 'nasaq' ); ?>
+						</a>
+						<?php
+					}
+					?>
 				</div>
 
-				<!-- Mobile Navigation -->
-				<nav id="mobile-navigation" class="mobile-nav" role="navigation" aria-label="<?php esc_attr_e( 'القائمة المتحركة', 'nasaq' ); ?>">
+				<!-- Mobile Menu Toggle Button -->
+				<button
+					class="mobile-menu-toggle"
+					aria-label="<?php esc_attr_e( 'فتح القائمة', 'nasaq' ); ?>"
+					aria-expanded="false"
+					aria-controls="mobile-menu-wrapper"
+				>
+					<span class="hamburger-icon">
+						<span class="line"></span>
+						<span class="line"></span>
+						<span class="line"></span>
+					</span>
+					<span class="screen-reader-text"><?php esc_html_e( 'القائمة', 'nasaq' ); ?></span>
+				</button>
+
+			</div>
+		</div>
+
+		<!-- Mobile Menu -->
+		<div id="mobile-menu-wrapper" class="mobile-menu-wrapper">
+			<div class="mobile-menu-inner">
+				<nav class="mobile-navigation" role="navigation" aria-label="<?php esc_attr_e( 'القائمة المتحركة', 'nasaq' ); ?>">
 					<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary',
-							'menu_id'        => 'mobile-menu',
-							'container'      => false,
-							'menu_class'     => 'mobile-menu',
-							'fallback_cb'    => '__return_false',
-						)
-					);
+					if ( has_nav_menu( 'primary' ) ) {
+						wp_nav_menu(
+							array(
+								'theme_location' => 'primary',
+								'menu_id'        => 'mobile-menu',
+								'menu_class'     => 'mobile-nav-menu',
+								'container'      => false,
+								'fallback_cb'    => false,
+								'depth'          => 2,
+							)
+						);
+					}
 					?>
-					<a href="#contact" class="btn btn-secondary mobile-cta"><?php esc_html_e( 'احصل على عرض سعر', 'nasaq' ); ?></a>
 				</nav>
+
+				<!-- Mobile Widgets -->
+				<div class="mobile-header-widgets">
+					<?php
+					if ( is_active_sidebar( 'header_section' ) ) {
+						dynamic_sidebar( 'header_section' );
+					}
+					?>
+				</div>
 			</div>
 		</div>
 	</header>
 
+	<!-- Main Content Area -->
 	<div id="content" class="site-content">
