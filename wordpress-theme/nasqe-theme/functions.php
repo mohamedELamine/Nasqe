@@ -11,6 +11,13 @@ if (!defined('ABSPATH')) {
 }
 
 /**
+ * تحميل الملفات الإضافية
+ */
+require_once get_template_directory() . '/inc/demo-importer.php';
+require_once get_template_directory() . '/inc/customizer.php';
+require_once get_template_directory() . '/inc/widgets.php';
+
+/**
  * إعداد القالب
  */
 function nasqe_theme_setup() {
