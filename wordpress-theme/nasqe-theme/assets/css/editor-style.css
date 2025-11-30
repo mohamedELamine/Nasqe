@@ -1,0 +1,32 @@
+/**
+ * أنماط محرر المحتوى
+ * Editor Styles
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+}
+
+/* تحسين عرض البلوكات في المحرر */
+.editor-styles-wrapper {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تحسين الأزرار في المحرر */
+.editor-styles-wrapper .wp-block-button__link {
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,66 @@
+/*
+Theme Name: نسق - Nasqe
+Theme URI: https://nasqe.com
+Author: Nasqe Team
+Author URI: https://nasqe.com
+Description: قالب ووردبريس احترافي مبني على البلوكات لوكالة نسق للحلول البرمجية. يدعم اللغة العربية بالكامل ومصمم بعناية للأداء العالي.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nasqe
+Tags: rtl-language-support, block-patterns, block-styles, custom-colors, custom-logo, editor-style, full-site-editing, one-column, template-editing, wide-blocks
+
+نسق - قالب ووردبريس مبني على البلوكات
+مصمم خصيصاً للوكالات الرقمية والشركات البرمجية
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+:root {
+  --primary-dark-green: #1a4d3e;
+  --primary-green: #2d6a4f;
+  --secondary-orange: #ff8c42;
+  --bg-light: #f8f9fa;
+  --text-dark: #1a1a1a;
+  --text-gray: #6b7280;
+  --border-gray: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  text-align: right;
+  background: white;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+}
+
+.wp-block-button__link {
+  font-family: 'Cairo', sans-serif;
+}
+
+/* تحسينات الأداء */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* دعم RTL */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}

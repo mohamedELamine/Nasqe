@@ -1,0 +1,186 @@
+/**
+ * أنماط مخصصة لقالب نسق
+ * Custom Styles for Nasqe Theme
+ */
+
+/* تحسينات عامة */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(10px);
+}
+
+/* تحسينات الأزرار */
+.wp-block-button__link {
+    transition: all 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.wp-block-button__link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(26, 77, 62, 0.3);
+}
+
+/* تأثيرات البطاقات */
+.wp-block-group {
+    transition: all 0.3s ease;
+}
+
+.wp-block-group:hover {
+    transform: translateY(-5px);
+}
+
+/* تحسين القوائم في Footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.footer-links li:hover {
+    transform: translateX(-5px);
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* تحسينات الصور */
+.wp-block-image img {
+    transition: transform 0.3s ease;
+}
+
+.wp-block-image:hover img {
+    transform: scale(1.02);
+}
+
+/* تحسينات RTL */
+html[dir="rtl"] .wp-block-navigation {
+    direction: rtl;
+}
+
+html[dir="rtl"] .wp-block-columns {
+    direction: rtl;
+}
+
+/* تأثيرات تمرير سلسة */
+html {
+    scroll-behavior: smooth;
+}
+
+/* تحسينات الأداء */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* تحسينات الأنيميشن */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-on-scroll {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* تحسينات الموبايل */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0.75rem 0;
+    }
+
+    .wp-block-columns {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.875rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* تحسين الأداء - تقليل الحركة للمستخدمين الذين يفضلون ذلك */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* تحسينات إمكانية الوصول */
+.wp-block-button__link:focus,
+a:focus {
+    outline: 2px solid var(--wp--preset--color--primary-dark-green);
+    outline-offset: 2px;
+}
+
+/* تحسينات الطباعة */
+@media print {
+    .site-header,
+    .wp-block-navigation,
+    .wp-block-button {
+        display: none;
+    }
+}
+
+/* تحسينات Loading */
+.wp-block-image img {
+    loading: lazy;
+}
+
+/* تأثيرات Gradient */
+.gradient-text {
+    background: linear-gradient(135deg, #1a4d3e 0%, #ff8c42 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* تحسينات الظلال */
+.shadow-custom {
+    box-shadow: 0 10px 30px rgba(26, 77, 62, 0.1);
+}
+
+.shadow-custom:hover {
+    box-shadow: 0 20px 50px rgba(26, 77, 62, 0.15);
+}
+
+/* تحسينات النصوص */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* تحسينات الأيقونات الاجتماعية */
+.wp-block-social-links a {
+    transition: all 0.3s ease;
+}
+
+.wp-block-social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
