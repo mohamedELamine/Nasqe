@@ -124,41 +124,111 @@
     }
 
     /**
-     * Form Validation (if needed)
+     * Handle Contact Form AJAX Submission
      */
-    function initFormValidation() {
-        $('form.contact-form').on('submit', function(e) {
-            let isValid = true;
-            const requiredFields = $(this).find('[required]');
+    function initContactForm() {
+        const form = $('#nasaq-contact-form');
+        const submitBtn = $('#nasaq-submit-btn');
+        const btnText = submitBtn.find('.btn-text');
+        const btnLoading = submitBtn.find('.btn-loading');
+        const messageArea = $('#nasaq-form-message');
 
-            requiredFields.each(function() {
-                if (!$(this).val().trim()) {
-                    isValid = false;
-                    $(this).addClass('error');
-                } else {
-                    $(this).removeClass('error');
+        if (form.length) {
+            form.on('submit', function(e) {
+                e.preventDefault();
+
+                // Client-side validation
+                let isValid = true;
+                const requiredFields = form.find('[required]');
+
+                requiredFields.each(function() {
+                    if (!$(this).val().trim()) {
+                        isValid = false;
+                        $(this).addClass('error');
+                    } else {
+                        $(this).removeClass('error');
+                    }
+                });
+
+                // Email validation
+                const emailField = form.find('input[type="email"]');
+                if (emailField.length && emailField.val()) {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(emailField.val())) {
+                        isValid = false;
+                        emailField.addClass('error');
+                        showMessage('يرجى إدخال بريد إلكتروني صحيح', 'error');
+                    }
                 }
+
+                if (!isValid) {
+                    showMessage('يرجى ملء جميع الحقول المطلوبة', 'error');
+                    return;
+                }
+
+                // Show loading state
+                submitBtn.prop('disabled', true);
+                btnText.hide();
+                btnLoading.show();
+                messageArea.hide();
+
+                // Prepare form data
+                const formData = {
+                    action: 'nasaq_contact_form',
+                    nonce: form.find('input[name="nonce"]').val(),
+                    name: form.find('input[name="name"]').val(),
+                    email: form.find('input[name="email"]').val(),
+                    phone: form.find('input[name="phone"]').val(),
+                    subject: form.find('input[name="subject"]').val(),
+                    message: form.find('textarea[name="message"]').val()
+                };
+
+                // Send AJAX request
+                $.ajax({
+                    url: nasaqData.ajaxUrl,
+                    type: 'POST',
+                    data: formData,
+                    success: function(response) {
+                        if (response.success) {
+                            showMessage(response.data.message, 'success');
+                            form[0].reset(); // Clear form
+                        } else {
+                            showMessage(response.data.message, 'error');
+                        }
+                    },
+                    error: function() {
+                        showMessage('حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.', 'error');
+                    },
+                    complete: function() {
+                        // Restore button state
+                        submitBtn.prop('disabled', false);
+                        btnText.show();
+                        btnLoading.hide();
+                    }
+                });
             });
 
-            // Email validation
-            const emailField = $(this).find('input[type="email"]');
-            if (emailField.length && emailField.val()) {
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(emailField.val())) {
-                    isValid = false;
-                    emailField.addClass('error');
+            // Remove error class on input
+            form.find('input, textarea').on('input', function() {
+                $(this).removeClass('error');
+            });
+
+            // Helper function to show messages
+            function showMessage(message, type) {
+                messageArea
+                    .removeClass('success error')
+                    .addClass(type)
+                    .html(message)
+                    .slideDown(300);
+
+                // Auto-hide success message after 5 seconds
+                if (type === 'success') {
+                    setTimeout(function() {
+                        messageArea.slideUp(300);
+                    }, 5000);
                 }
             }
-
-            if (!isValid) {
-                e.preventDefault();
-            }
-        });
-
-        // Remove error class on input
-        $('form.contact-form input, form.contact-form textarea').on('input', function() {
-            $(this).removeClass('error');
-        });
+        }
     }
 
     /**
@@ -240,7 +310,7 @@
         initSmoothScroll();
         initHeaderScroll();
         initScrollAnimations();
-        initFormValidation();
+        initContactForm();
         initStatsCounter();
         initBackToTop();
     });

@@ -1383,36 +1383,42 @@ class Nasaq_Contact_Widget extends WP_Widget {
 						<?php if ( $shortcode ) : ?>
 							<?php echo do_shortcode( $shortcode ); ?>
 						<?php else : ?>
-							<form class="contact-form" method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+							<!-- Form Message Area -->
+							<div id="nasaq-form-message" class="form-message" style="display: none;"></div>
+
+							<form id="nasaq-contact-form" class="contact-form" method="post">
 								<input type="hidden" name="action" value="nasaq_contact_form">
-								<?php wp_nonce_field( 'nasaq_contact_form', 'nasaq_contact_nonce' ); ?>
+								<input type="hidden" name="nonce" value="<?php echo wp_create_nonce( 'nasaq_contact_form' ); ?>">
 
 								<div class="form-group">
-									<label for="contact-name">الاسم *</label>
-									<input type="text" id="contact-name" name="contact_name" required>
+									<label for="contact-name">الاسم <span class="required">*</span></label>
+									<input type="text" id="contact-name" name="name" required aria-required="true">
 								</div>
 
 								<div class="form-group">
-									<label for="contact-email">البريد الإلكتروني *</label>
-									<input type="email" id="contact-email" name="contact_email" required>
+									<label for="contact-email">البريد الإلكتروني <span class="required">*</span></label>
+									<input type="email" id="contact-email" name="email" required aria-required="true">
 								</div>
 
 								<div class="form-group">
 									<label for="contact-phone">رقم الهاتف</label>
-									<input type="tel" id="contact-phone" name="contact_phone">
+									<input type="tel" id="contact-phone" name="phone">
 								</div>
 
 								<div class="form-group">
-									<label for="contact-subject">الموضوع *</label>
-									<input type="text" id="contact-subject" name="contact_subject" required>
+									<label for="contact-subject">الموضوع <span class="required">*</span></label>
+									<input type="text" id="contact-subject" name="subject" required aria-required="true">
 								</div>
 
 								<div class="form-group">
-									<label for="contact-message">الرسالة *</label>
-									<textarea id="contact-message" name="contact_message" rows="5" required></textarea>
+									<label for="contact-message">الرسالة <span class="required">*</span></label>
+									<textarea id="contact-message" name="message" rows="5" required aria-required="true"></textarea>
 								</div>
 
-								<button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+								<button type="submit" class="btn btn-primary" id="nasaq-submit-btn">
+									<span class="btn-text">إرسال الرسالة</span>
+									<span class="btn-loading" style="display: none;">جارٍ الإرسال...</span>
+								</button>
 							</form>
 							<p class="form-note"><em>أو استخدم Contact Form 7 عبر إضافة الـ shortcode في إعدادات الودجت</em></p>
 						<?php endif; ?>

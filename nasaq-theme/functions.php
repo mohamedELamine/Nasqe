@@ -170,6 +170,98 @@ function nasaq_fix_font_mime_type_check( $data, $file, $filename, $mimes ) {
 add_filter( 'wp_check_filetype_and_ext', 'nasaq_fix_font_mime_type_check', 10, 4 );
 
 /**
+ * Handle Contact Form AJAX Submission
+ */
+function nasaq_handle_contact_form() {
+	// Verify nonce
+	if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'nasaq_contact_form' ) ) {
+		wp_send_json_error( array(
+			'message' => __( 'خطأ في التحقق الأمني. يرجى تحديث الصفحة والمحاولة مرة أخرى.', 'nasaq' )
+		) );
+	}
+
+	// Sanitize and validate inputs
+	$name = isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] ) : '';
+	$email = isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '';
+	$phone = isset( $_POST['phone'] ) ? sanitize_text_field( $_POST['phone'] ) : '';
+	$subject = isset( $_POST['subject'] ) ? sanitize_text_field( $_POST['subject'] ) : '';
+	$message = isset( $_POST['message'] ) ? sanitize_textarea_field( $_POST['message'] ) : '';
+
+	// Validation
+	$errors = array();
+
+	if ( empty( $name ) ) {
+		$errors[] = __( 'الاسم مطلوب', 'nasaq' );
+	}
+
+	if ( empty( $email ) || ! is_email( $email ) ) {
+		$errors[] = __( 'البريد الإلكتروني غير صحيح', 'nasaq' );
+	}
+
+	if ( empty( $subject ) ) {
+		$errors[] = __( 'الموضوع مطلوب', 'nasaq' );
+	}
+
+	if ( empty( $message ) ) {
+		$errors[] = __( 'الرسالة مطلوبة', 'nasaq' );
+	}
+
+	// Check for errors
+	if ( ! empty( $errors ) ) {
+		wp_send_json_error( array(
+			'message' => implode( '<br>', $errors )
+		) );
+	}
+
+	// Prepare email
+	$admin_email = get_option( 'admin_email' );
+	$site_name = get_bloginfo( 'name' );
+
+	$email_subject = sprintf(
+		__( '[%s] رسالة جديدة من نموذج التواصل: %s', 'nasaq' ),
+		$site_name,
+		$subject
+	);
+
+	$email_body = sprintf(
+		"رسالة جديدة من نموذج التواصل:\n\n" .
+		"الاسم: %s\n" .
+		"البريد الإلكتروني: %s\n" .
+		"رقم الهاتف: %s\n" .
+		"الموضوع: %s\n\n" .
+		"الرسالة:\n%s\n\n" .
+		"---\n" .
+		"تم الإرسال من: %s",
+		$name,
+		$email,
+		$phone ? $phone : __( 'غير متوفر', 'nasaq' ),
+		$subject,
+		$message,
+		home_url()
+	);
+
+	$headers = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		'Reply-To: ' . $name . ' <' . $email . '>',
+	);
+
+	// Send email
+	$sent = wp_mail( $admin_email, $email_subject, $email_body, $headers );
+
+	if ( $sent ) {
+		wp_send_json_success( array(
+			'message' => __( 'شكراً لتواصلك معنا! تم إرسال رسالتك بنجاح وسنرد عليك في أقرب وقت.', 'nasaq' )
+		) );
+	} else {
+		wp_send_json_error( array(
+			'message' => __( 'عذراً، حدث خطأ أثناء إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة.', 'nasaq' )
+		) );
+	}
+}
+add_action( 'wp_ajax_nasaq_contact_form', 'nasaq_handle_contact_form' );
+add_action( 'wp_ajax_nopriv_nasaq_contact_form', 'nasaq_handle_contact_form' );
+
+/**
  * Add body classes for RTL support
  */
 function nasaq_body_classes( $classes ) {
