@@ -140,6 +140,36 @@ require_once get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/demo-content.php';
 
 /**
+ * Allow Upload of Font Files (woff, woff2, ttf, otf)
+ */
+function nasaq_enable_font_upload( $mimes ) {
+	$mimes['woff']  = 'font/woff';
+	$mimes['woff2'] = 'font/woff2';
+	$mimes['ttf']   = 'font/ttf';
+	$mimes['otf']   = 'font/otf';
+	$mimes['eot']   = 'application/vnd.ms-fontobject';
+	return $mimes;
+}
+add_filter( 'upload_mimes', 'nasaq_enable_font_upload' );
+
+/**
+ * Fix mime type check for fonts
+ */
+function nasaq_fix_font_mime_type_check( $data, $file, $filename, $mimes ) {
+	$wp_filetype = wp_check_filetype( $filename, $mimes );
+	$ext = $wp_filetype['ext'];
+	$type = $wp_filetype['type'];
+
+	if ( $ext && in_array( $ext, array( 'woff', 'woff2', 'ttf', 'otf', 'eot' ) ) ) {
+		$data['ext'] = $ext;
+		$data['type'] = $type;
+	}
+
+	return $data;
+}
+add_filter( 'wp_check_filetype_and_ext', 'nasaq_fix_font_mime_type_check', 10, 4 );
+
+/**
  * Add body classes for RTL support
  */
 function nasaq_body_classes( $classes ) {

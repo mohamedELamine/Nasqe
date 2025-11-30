@@ -241,7 +241,7 @@ function nasaq_import_demo_widgets() {
 		'cta1_url'    => '#contact',
 		'cta2_text'   => 'تعرف علينا',
 		'cta2_url'    => '#about',
-		'image'       => '',
+		'image'       => 'https://images.unsplash.com/photo-1699004642562-63a26850d89f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsYXB0b3AlMjBtb2NrdXAlMjB3b3Jrc3BhY2V8ZW58MXx8fHwxNzY0MzU3NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080',
 	);
 
 	$sidebars_widgets = get_option( 'sidebars_widgets', array() );
@@ -314,7 +314,7 @@ function nasaq_import_demo_widgets() {
 		'title'       => 'من نحن',
 		'subtitle'    => 'فريق متخصص من المطورين والمصممين',
 		'description' => 'نسق للحلول البرمجية هي شركة رائدة في مجال تطوير المواقع والتطبيقات. نقدم حلولاً مبتكرة تساعد الشركات على النمو والتطور في العالم الرقمي.',
-		'image'       => '',
+		'image'       => 'https://images.unsplash.com/photo-1739298061707-cefee19941b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwY29sbGFib3JhdGlvbiUyMHdvcmtzcGFjZXxlbnwxfHx8fDE3NjQzODE5MTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
 	);
 
 	$about_instances = get_option( 'widget_nasaq_about_widget', array() );

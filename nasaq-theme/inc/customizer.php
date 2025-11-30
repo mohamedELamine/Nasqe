@@ -173,9 +173,63 @@ function nasaq_customize_register( $wp_customize ) {
 			'Harmattan'      => 'Harmattan - هرمتن',
 			'Changa'         => 'Changa - چنگہ',
 			'Reem Kufi'      => 'Reem Kufi - ريم كوفي',
+			'custom'         => __( 'خط مخصص (Custom Font)', 'nasaq' ),
 		),
 		'description' => __( 'اختر الخط العربي المستخدم في الموقع', 'nasaq' ),
 	) );
+
+	// Custom Font Name
+	$wp_customize->add_setting( 'nasaq_custom_font_name', array(
+		'default'           => '',
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( 'nasaq_custom_font_name', array(
+		'label'       => __( 'اسم الخط المخصص (Custom Font Name)', 'nasaq' ),
+		'section'     => 'nasaq_typography',
+		'type'        => 'text',
+		'description' => __( 'أدخل اسم الخط المخصص (مثال: MyCustomFont)', 'nasaq' ),
+	) );
+
+	// Custom Font WOFF2
+	$wp_customize->add_setting( 'nasaq_custom_font_woff2', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'nasaq_custom_font_woff2', array(
+		'label'       => __( 'ملف الخط WOFF2', 'nasaq' ),
+		'section'     => 'nasaq_typography',
+		'description' => __( 'ارفع ملف الخط بصيغة WOFF2 (موصى به للمتصفحات الحديثة)', 'nasaq' ),
+	) ) );
+
+	// Custom Font WOFF
+	$wp_customize->add_setting( 'nasaq_custom_font_woff', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'nasaq_custom_font_woff', array(
+		'label'       => __( 'ملف الخط WOFF', 'nasaq' ),
+		'section'     => 'nasaq_typography',
+		'description' => __( 'ارفع ملف الخط بصيغة WOFF (للمتصفحات القديمة)', 'nasaq' ),
+	) ) );
+
+	// Custom Font TTF
+	$wp_customize->add_setting( 'nasaq_custom_font_ttf', array(
+		'default'           => '',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport'         => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, 'nasaq_custom_font_ttf', array(
+		'label'       => __( 'ملف الخط TTF', 'nasaq' ),
+		'section'     => 'nasaq_typography',
+		'description' => __( 'ارفع ملف الخط بصيغة TTF (احتياطي)', 'nasaq' ),
+	) ) );
 
 	// Base Font Size
 	$wp_customize->add_setting( 'nasaq_base_font_size', array(
@@ -327,6 +381,12 @@ function nasaq_typography_css() {
 	// Get font family
 	$font_family = get_theme_mod( 'nasaq_font_family', 'Cairo' );
 
+	// Get custom font settings
+	$custom_font_name = get_theme_mod( 'nasaq_custom_font_name', '' );
+	$custom_font_woff2 = get_theme_mod( 'nasaq_custom_font_woff2', '' );
+	$custom_font_woff = get_theme_mod( 'nasaq_custom_font_woff', '' );
+	$custom_font_ttf = get_theme_mod( 'nasaq_custom_font_ttf', '' );
+
 	// Get font sizes
 	$base_font_size = get_theme_mod( 'nasaq_base_font_size', 16 );
 	$h1_font_size = get_theme_mod( 'nasaq_h1_font_size', 48 );
@@ -344,10 +404,39 @@ function nasaq_typography_css() {
 	$primary_color = get_theme_mod( 'nasaq_primary_color', '#1a4d3e' );
 	$secondary_color = get_theme_mod( 'nasaq_secondary_color', '#ff8c42' );
 
+	// Determine actual font family to use
+	$actual_font_family = $font_family;
+	if ( $font_family === 'custom' && $custom_font_name ) {
+		$actual_font_family = $custom_font_name;
+	}
+
 	?>
 	<style type="text/css">
+		<?php if ( $font_family === 'custom' && $custom_font_name && ( $custom_font_woff2 || $custom_font_woff || $custom_font_ttf ) ) : ?>
+		/* Custom Font Face */
+		@font-face {
+			font-family: '<?php echo esc_attr( $custom_font_name ); ?>';
+			src: <?php
+				$sources = array();
+				if ( $custom_font_woff2 ) {
+					$sources[] = "url('" . esc_url( $custom_font_woff2 ) . "') format('woff2')";
+				}
+				if ( $custom_font_woff ) {
+					$sources[] = "url('" . esc_url( $custom_font_woff ) . "') format('woff')";
+				}
+				if ( $custom_font_ttf ) {
+					$sources[] = "url('" . esc_url( $custom_font_ttf ) . "') format('truetype')";
+				}
+				echo implode( ",\n\t\t\t     ", $sources );
+			?>;
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+		<?php endif; ?>
+
 		:root {
-			--font-family: '<?php echo esc_attr( $font_family ); ?>', sans-serif;
+			--font-family: '<?php echo esc_attr( $actual_font_family ); ?>', sans-serif;
 			--base-font-size: <?php echo absint( $base_font_size ); ?>px;
 			--h1-font-size: <?php echo absint( $h1_font_size ); ?>px;
 			--h2-font-size: <?php echo absint( $h2_font_size ); ?>px;

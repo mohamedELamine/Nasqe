@@ -262,6 +262,30 @@ class Nasaq_Services_Widget extends WP_Widget {
 
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : 'خدماتنا';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Service 1
+		$service_1_title = ! empty( $instance['service_1_title'] ) ? $instance['service_1_title'] : 'تطوير مواقع ووردبريس';
+		$service_1_description = ! empty( $instance['service_1_description'] ) ? $instance['service_1_description'] : 'مواقع شركات، متاجر، ومدونات مبنية على قوالب مخصّصة، سريعة وسهلة الإدارة.';
+		$service_1_icon = ! empty( $instance['service_1_icon'] ) ? $instance['service_1_icon'] : '🌐';
+		$service_1_link = ! empty( $instance['service_1_link'] ) ? $instance['service_1_link'] : '#contact';
+
+		// Service 2
+		$service_2_title = ! empty( $instance['service_2_title'] ) ? $instance['service_2_title'] : 'تصميم صفحات هبوط';
+		$service_2_description = ! empty( $instance['service_2_description'] ) ? $instance['service_2_description'] : 'صفحات هبوط مدروسة، تركّز على تحويل الزائر إلى عميل، مع نسق بصري واضح ومسار مستخدم بسيط.';
+		$service_2_icon = ! empty( $instance['service_2_icon'] ) ? $instance['service_2_icon'] : '⚡';
+		$service_2_link = ! empty( $instance['service_2_link'] ) ? $instance['service_2_link'] : '#contact';
+
+		// Service 3
+		$service_3_title = ! empty( $instance['service_3_title'] ) ? $instance['service_3_title'] : 'تحسين الأداء والـSEO';
+		$service_3_description = ! empty( $instance['service_3_description'] ) ? $instance['service_3_description'] : 'تسريع الموقع، تحسين ظهوره في محركات البحث، وضبط البنية التقنية.';
+		$service_3_icon = ! empty( $instance['service_3_icon'] ) ? $instance['service_3_icon'] : '📈';
+		$service_3_link = ! empty( $instance['service_3_link'] ) ? $instance['service_3_link'] : '#contact';
+
+		// Service 4
+		$service_4_title = ! empty( $instance['service_4_title'] ) ? $instance['service_4_title'] : 'حلول برمجية مخصّصة';
+		$service_4_description = ! empty( $instance['service_4_description'] ) ? $instance['service_4_description'] : 'ربط أنظمة، تطوير إضافات ووردبريس، ولوحات تحكم تناسب عملك.';
+		$service_4_icon = ! empty( $instance['service_4_icon'] ) ? $instance['service_4_icon'] : '💻';
+		$service_4_link = ! empty( $instance['service_4_link'] ) ? $instance['service_4_link'] : '#contact';
 		?>
 
 		<div class="services-content-wrapper">
@@ -278,31 +302,31 @@ class Nasaq_Services_Widget extends WP_Widget {
 
 				<div class="services-grid">
 					<div class="service-card">
-						<div class="service-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">🌐</div>
-						<h3 class="service-title">تطوير مواقع ووردبريس</h3>
-						<p class="service-description">مواقع شركات، متاجر، ومدونات مبنية على قوالب مخصّصة، سريعة وسهلة الإدارة.</p>
-						<a href="#contact" class="service-link">اعرف المزيد ←</a>
+						<div class="service-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);"><?php echo esc_html( $service_1_icon ); ?></div>
+						<h3 class="service-title"><?php echo esc_html( $service_1_title ); ?></h3>
+						<p class="service-description"><?php echo esc_html( $service_1_description ); ?></p>
+						<a href="<?php echo esc_url( $service_1_link ); ?>" class="service-link">اعرف المزيد ←</a>
 					</div>
 
 					<div class="service-card">
-						<div class="service-icon" style="background: linear-gradient(135deg, #ff8c42 0%, #f97316 100%);">⚡</div>
-						<h3 class="service-title">تصميم صفحات هبوط</h3>
-						<p class="service-description">صفحات هبوط مدروسة، تركّز على تحويل الزائر إلى عميل، مع نسق بصري واضح ومسار مستخدم بسيط.</p>
-						<a href="#contact" class="service-link">اعرف المزيد ←</a>
+						<div class="service-icon" style="background: linear-gradient(135deg, #ff8c42 0%, #f97316 100%);"><?php echo esc_html( $service_2_icon ); ?></div>
+						<h3 class="service-title"><?php echo esc_html( $service_2_title ); ?></h3>
+						<p class="service-description"><?php echo esc_html( $service_2_description ); ?></p>
+						<a href="<?php echo esc_url( $service_2_link ); ?>" class="service-link">اعرف المزيد ←</a>
 					</div>
 
 					<div class="service-card">
-						<div class="service-icon" style="background: linear-gradient(135deg, #2d6a4f 0%, #1a4d3e 100%);">📈</div>
-						<h3 class="service-title">تحسين الأداء والـSEO</h3>
-						<p class="service-description">تسريع الموقع، تحسين ظهوره في محركات البحث، وضبط البنية التقنية.</p>
-						<a href="#contact" class="service-link">اعرف المزيد ←</a>
+						<div class="service-icon" style="background: linear-gradient(135deg, #2d6a4f 0%, #1a4d3e 100%);"><?php echo esc_html( $service_3_icon ); ?></div>
+						<h3 class="service-title"><?php echo esc_html( $service_3_title ); ?></h3>
+						<p class="service-description"><?php echo esc_html( $service_3_description ); ?></p>
+						<a href="<?php echo esc_url( $service_3_link ); ?>" class="service-link">اعرف المزيد ←</a>
 					</div>
 
 					<div class="service-card">
-						<div class="service-icon" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);">💻</div>
-						<h3 class="service-title">حلول برمجية مخصّصة</h3>
-						<p class="service-description">ربط أنظمة، تطوير إضافات ووردبريس، ولوحات تحكم تناسب عملك.</p>
-						<a href="#contact" class="service-link">اعرف المزيد ←</a>
+						<div class="service-icon" style="background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);"><?php echo esc_html( $service_4_icon ); ?></div>
+						<h3 class="service-title"><?php echo esc_html( $service_4_title ); ?></h3>
+						<p class="service-description"><?php echo esc_html( $service_4_description ); ?></p>
+						<a href="<?php echo esc_url( $service_4_link ); ?>" class="service-link">اعرف المزيد ←</a>
 					</div>
 				</div>
 			</div>
@@ -315,6 +339,30 @@ class Nasaq_Services_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Service 1
+		$service_1_title = ! empty( $instance['service_1_title'] ) ? $instance['service_1_title'] : '';
+		$service_1_description = ! empty( $instance['service_1_description'] ) ? $instance['service_1_description'] : '';
+		$service_1_icon = ! empty( $instance['service_1_icon'] ) ? $instance['service_1_icon'] : '';
+		$service_1_link = ! empty( $instance['service_1_link'] ) ? $instance['service_1_link'] : '';
+
+		// Service 2
+		$service_2_title = ! empty( $instance['service_2_title'] ) ? $instance['service_2_title'] : '';
+		$service_2_description = ! empty( $instance['service_2_description'] ) ? $instance['service_2_description'] : '';
+		$service_2_icon = ! empty( $instance['service_2_icon'] ) ? $instance['service_2_icon'] : '';
+		$service_2_link = ! empty( $instance['service_2_link'] ) ? $instance['service_2_link'] : '';
+
+		// Service 3
+		$service_3_title = ! empty( $instance['service_3_title'] ) ? $instance['service_3_title'] : '';
+		$service_3_description = ! empty( $instance['service_3_description'] ) ? $instance['service_3_description'] : '';
+		$service_3_icon = ! empty( $instance['service_3_icon'] ) ? $instance['service_3_icon'] : '';
+		$service_3_link = ! empty( $instance['service_3_link'] ) ? $instance['service_3_link'] : '';
+
+		// Service 4
+		$service_4_title = ! empty( $instance['service_4_title'] ) ? $instance['service_4_title'] : '';
+		$service_4_description = ! empty( $instance['service_4_description'] ) ? $instance['service_4_description'] : '';
+		$service_4_icon = ! empty( $instance['service_4_icon'] ) ? $instance['service_4_icon'] : '';
+		$service_4_link = ! empty( $instance['service_4_link'] ) ? $instance['service_4_link'] : '';
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">عنوان القسم:</label>
@@ -324,7 +372,82 @@ class Nasaq_Services_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'subtitle' ); ?>">وصف القسم:</label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'subtitle' ); ?>" name="<?php echo $this->get_field_name( 'subtitle' ); ?>" rows="3"><?php echo esc_textarea( $subtitle ); ?></textarea>
 		</p>
-		<p><em>يمكنك تعديل الخدمات من خلال تحرير الكود في inc/widgets.php</em></p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الخدمة الأولى</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_1_title' ); ?>">عنوان الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_1_title' ); ?>" name="<?php echo $this->get_field_name( 'service_1_title' ); ?>" type="text" value="<?php echo esc_attr( $service_1_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_1_description' ); ?>">وصف الخدمة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'service_1_description' ); ?>" name="<?php echo $this->get_field_name( 'service_1_description' ); ?>" rows="2"><?php echo esc_textarea( $service_1_description ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_1_icon' ); ?>">أيقونة الخدمة (emoji أو نص):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_1_icon' ); ?>" name="<?php echo $this->get_field_name( 'service_1_icon' ); ?>" type="text" value="<?php echo esc_attr( $service_1_icon ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_1_link' ); ?>">رابط الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_1_link' ); ?>" name="<?php echo $this->get_field_name( 'service_1_link' ); ?>" type="text" value="<?php echo esc_url( $service_1_link ); ?>">
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الخدمة الثانية</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_2_title' ); ?>">عنوان الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_2_title' ); ?>" name="<?php echo $this->get_field_name( 'service_2_title' ); ?>" type="text" value="<?php echo esc_attr( $service_2_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_2_description' ); ?>">وصف الخدمة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'service_2_description' ); ?>" name="<?php echo $this->get_field_name( 'service_2_description' ); ?>" rows="2"><?php echo esc_textarea( $service_2_description ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_2_icon' ); ?>">أيقونة الخدمة (emoji أو نص):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_2_icon' ); ?>" name="<?php echo $this->get_field_name( 'service_2_icon' ); ?>" type="text" value="<?php echo esc_attr( $service_2_icon ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_2_link' ); ?>">رابط الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_2_link' ); ?>" name="<?php echo $this->get_field_name( 'service_2_link' ); ?>" type="text" value="<?php echo esc_url( $service_2_link ); ?>">
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الخدمة الثالثة</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_3_title' ); ?>">عنوان الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_3_title' ); ?>" name="<?php echo $this->get_field_name( 'service_3_title' ); ?>" type="text" value="<?php echo esc_attr( $service_3_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_3_description' ); ?>">وصف الخدمة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'service_3_description' ); ?>" name="<?php echo $this->get_field_name( 'service_3_description' ); ?>" rows="2"><?php echo esc_textarea( $service_3_description ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_3_icon' ); ?>">أيقونة الخدمة (emoji أو نص):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_3_icon' ); ?>" name="<?php echo $this->get_field_name( 'service_3_icon' ); ?>" type="text" value="<?php echo esc_attr( $service_3_icon ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_3_link' ); ?>">رابط الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_3_link' ); ?>" name="<?php echo $this->get_field_name( 'service_3_link' ); ?>" type="text" value="<?php echo esc_url( $service_3_link ); ?>">
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الخدمة الرابعة</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_4_title' ); ?>">عنوان الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_4_title' ); ?>" name="<?php echo $this->get_field_name( 'service_4_title' ); ?>" type="text" value="<?php echo esc_attr( $service_4_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_4_description' ); ?>">وصف الخدمة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'service_4_description' ); ?>" name="<?php echo $this->get_field_name( 'service_4_description' ); ?>" rows="2"><?php echo esc_textarea( $service_4_description ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_4_icon' ); ?>">أيقونة الخدمة (emoji أو نص):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_4_icon' ); ?>" name="<?php echo $this->get_field_name( 'service_4_icon' ); ?>" type="text" value="<?php echo esc_attr( $service_4_icon ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'service_4_link' ); ?>">رابط الخدمة:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'service_4_link' ); ?>" name="<?php echo $this->get_field_name( 'service_4_link' ); ?>" type="text" value="<?php echo esc_url( $service_4_link ); ?>">
+		</p>
 		<?php
 	}
 
@@ -332,6 +455,31 @@ class Nasaq_Services_Widget extends WP_Widget {
 		$instance = array();
 		$instance['title'] = ! empty( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 		$instance['subtitle'] = ! empty( $new_instance['subtitle'] ) ? sanitize_textarea_field( $new_instance['subtitle'] ) : '';
+
+		// Service 1
+		$instance['service_1_title'] = ! empty( $new_instance['service_1_title'] ) ? sanitize_text_field( $new_instance['service_1_title'] ) : '';
+		$instance['service_1_description'] = ! empty( $new_instance['service_1_description'] ) ? sanitize_textarea_field( $new_instance['service_1_description'] ) : '';
+		$instance['service_1_icon'] = ! empty( $new_instance['service_1_icon'] ) ? sanitize_text_field( $new_instance['service_1_icon'] ) : '';
+		$instance['service_1_link'] = ! empty( $new_instance['service_1_link'] ) ? esc_url_raw( $new_instance['service_1_link'] ) : '';
+
+		// Service 2
+		$instance['service_2_title'] = ! empty( $new_instance['service_2_title'] ) ? sanitize_text_field( $new_instance['service_2_title'] ) : '';
+		$instance['service_2_description'] = ! empty( $new_instance['service_2_description'] ) ? sanitize_textarea_field( $new_instance['service_2_description'] ) : '';
+		$instance['service_2_icon'] = ! empty( $new_instance['service_2_icon'] ) ? sanitize_text_field( $new_instance['service_2_icon'] ) : '';
+		$instance['service_2_link'] = ! empty( $new_instance['service_2_link'] ) ? esc_url_raw( $new_instance['service_2_link'] ) : '';
+
+		// Service 3
+		$instance['service_3_title'] = ! empty( $new_instance['service_3_title'] ) ? sanitize_text_field( $new_instance['service_3_title'] ) : '';
+		$instance['service_3_description'] = ! empty( $new_instance['service_3_description'] ) ? sanitize_textarea_field( $new_instance['service_3_description'] ) : '';
+		$instance['service_3_icon'] = ! empty( $new_instance['service_3_icon'] ) ? sanitize_text_field( $new_instance['service_3_icon'] ) : '';
+		$instance['service_3_link'] = ! empty( $new_instance['service_3_link'] ) ? esc_url_raw( $new_instance['service_3_link'] ) : '';
+
+		// Service 4
+		$instance['service_4_title'] = ! empty( $new_instance['service_4_title'] ) ? sanitize_text_field( $new_instance['service_4_title'] ) : '';
+		$instance['service_4_description'] = ! empty( $new_instance['service_4_description'] ) ? sanitize_textarea_field( $new_instance['service_4_description'] ) : '';
+		$instance['service_4_icon'] = ! empty( $new_instance['service_4_icon'] ) ? sanitize_text_field( $new_instance['service_4_icon'] ) : '';
+		$instance['service_4_link'] = ! empty( $new_instance['service_4_link'] ) ? esc_url_raw( $new_instance['service_4_link'] ) : '';
+
 		return $instance;
 	}
 }
@@ -354,6 +502,46 @@ class Nasaq_Portfolio_Widget extends WP_Widget {
 
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : 'أعمالنا';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Project 1
+		$project_1_image = ! empty( $instance['project_1_image'] ) ? $instance['project_1_image'] : 'https://via.placeholder.com/400x300/1a4d3e/ffffff?text=Project+1';
+		$project_1_title = ! empty( $instance['project_1_title'] ) ? $instance['project_1_title'] : 'موقع شركة تقنية';
+		$project_1_type = ! empty( $instance['project_1_type'] ) ? $instance['project_1_type'] : 'تطوير ويب';
+		$project_1_link = ! empty( $instance['project_1_link'] ) ? $instance['project_1_link'] : '#';
+
+		// Project 2
+		$project_2_image = ! empty( $instance['project_2_image'] ) ? $instance['project_2_image'] : 'https://via.placeholder.com/400x300/ff8c42/ffffff?text=Project+2';
+		$project_2_title = ! empty( $instance['project_2_title'] ) ? $instance['project_2_title'] : 'متجر إلكتروني';
+		$project_2_type = ! empty( $instance['project_2_type'] ) ? $instance['project_2_type'] : 'ووكوميرس';
+		$project_2_link = ! empty( $instance['project_2_link'] ) ? $instance['project_2_link'] : '#';
+
+		// Project 3
+		$project_3_image = ! empty( $instance['project_3_image'] ) ? $instance['project_3_image'] : 'https://via.placeholder.com/400x300/2d6a4f/ffffff?text=Project+3';
+		$project_3_title = ! empty( $instance['project_3_title'] ) ? $instance['project_3_title'] : 'تطبيق ويب';
+		$project_3_type = ! empty( $instance['project_3_type'] ) ? $instance['project_3_type'] : 'تطوير تطبيقات';
+		$project_3_link = ! empty( $instance['project_3_link'] ) ? $instance['project_3_link'] : '#';
+
+		// مشاريع افتراضية إضافية (4-6)
+		$default_projects = array(
+			array(
+				'title' => 'موقع تعليمي',
+				'category' => 'منصة تعليمية',
+				'image' => 'https://via.placeholder.com/400x300/3b82f6/ffffff?text=Project+4',
+				'link' => '#'
+			),
+			array(
+				'title' => 'صفحة هبوط',
+				'category' => 'تسويق رقمي',
+				'image' => 'https://via.placeholder.com/400x300/a855f7/ffffff?text=Project+5',
+				'link' => '#'
+			),
+			array(
+				'title' => 'موقع مطعم',
+				'category' => 'مواقع شركات',
+				'image' => 'https://via.placeholder.com/400x300/f97316/ffffff?text=Project+6',
+				'link' => '#'
+			),
+		);
 		?>
 
 		<div class="portfolio-content-wrapper">
@@ -369,50 +557,51 @@ class Nasaq_Portfolio_Widget extends WP_Widget {
 				</div>
 
 				<div class="portfolio-grid">
-					<?php
-					// عرض آخر 6 مشاريع من custom post type أو استخدام محتوى افتراضي
-					$projects = array(
-						array(
-							'title' => 'موقع شركة تقنية',
-							'category' => 'تطوير ويب',
-							'image' => 'https://via.placeholder.com/400x300/1a4d3e/ffffff?text=Project+1',
-						),
-						array(
-							'title' => 'متجر إلكتروني',
-							'category' => 'ووكوميرس',
-							'image' => 'https://via.placeholder.com/400x300/ff8c42/ffffff?text=Project+2',
-						),
-						array(
-							'title' => 'تطبيق ويب',
-							'category' => 'تطوير تطبيقات',
-							'image' => 'https://via.placeholder.com/400x300/2d6a4f/ffffff?text=Project+3',
-						),
-						array(
-							'title' => 'موقع تعليمي',
-							'category' => 'منصة تعليمية',
-							'image' => 'https://via.placeholder.com/400x300/3b82f6/ffffff?text=Project+4',
-						),
-						array(
-							'title' => 'صفحة هبوط',
-							'category' => 'تسويق رقمي',
-							'image' => 'https://via.placeholder.com/400x300/a855f7/ffffff?text=Project+5',
-						),
-						array(
-							'title' => 'موقع مطعم',
-							'category' => 'مواقع شركات',
-							'image' => 'https://via.placeholder.com/400x300/f97316/ffffff?text=Project+6',
-						),
-					);
+					<!-- Project 1 -->
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img src="<?php echo esc_url( $project_1_image ); ?>" alt="<?php echo esc_attr( $project_1_title ); ?>">
+							<div class="portfolio-overlay">
+								<h3><?php echo esc_html( $project_1_title ); ?></h3>
+								<p><?php echo esc_html( $project_1_type ); ?></p>
+								<a href="<?php echo esc_url( $project_1_link ); ?>" class="portfolio-link">عرض المشروع</a>
+							</div>
+						</div>
+					</div>
 
-					foreach ( $projects as $project ) :
-					?>
+					<!-- Project 2 -->
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img src="<?php echo esc_url( $project_2_image ); ?>" alt="<?php echo esc_attr( $project_2_title ); ?>">
+							<div class="portfolio-overlay">
+								<h3><?php echo esc_html( $project_2_title ); ?></h3>
+								<p><?php echo esc_html( $project_2_type ); ?></p>
+								<a href="<?php echo esc_url( $project_2_link ); ?>" class="portfolio-link">عرض المشروع</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Project 3 -->
+					<div class="portfolio-item">
+						<div class="portfolio-image">
+							<img src="<?php echo esc_url( $project_3_image ); ?>" alt="<?php echo esc_attr( $project_3_title ); ?>">
+							<div class="portfolio-overlay">
+								<h3><?php echo esc_html( $project_3_title ); ?></h3>
+								<p><?php echo esc_html( $project_3_type ); ?></p>
+								<a href="<?php echo esc_url( $project_3_link ); ?>" class="portfolio-link">عرض المشروع</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Default Projects 4-6 -->
+					<?php foreach ( $default_projects as $project ) : ?>
 						<div class="portfolio-item">
 							<div class="portfolio-image">
 								<img src="<?php echo esc_url( $project['image'] ); ?>" alt="<?php echo esc_attr( $project['title'] ); ?>">
 								<div class="portfolio-overlay">
 									<h3><?php echo esc_html( $project['title'] ); ?></h3>
 									<p><?php echo esc_html( $project['category'] ); ?></p>
-									<a href="#" class="portfolio-link">عرض المشروع</a>
+									<a href="<?php echo esc_url( $project['link'] ); ?>" class="portfolio-link">عرض المشروع</a>
 								</div>
 							</div>
 						</div>
@@ -428,6 +617,24 @@ class Nasaq_Portfolio_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Project 1
+		$project_1_image = ! empty( $instance['project_1_image'] ) ? $instance['project_1_image'] : '';
+		$project_1_title = ! empty( $instance['project_1_title'] ) ? $instance['project_1_title'] : '';
+		$project_1_type = ! empty( $instance['project_1_type'] ) ? $instance['project_1_type'] : '';
+		$project_1_link = ! empty( $instance['project_1_link'] ) ? $instance['project_1_link'] : '';
+
+		// Project 2
+		$project_2_image = ! empty( $instance['project_2_image'] ) ? $instance['project_2_image'] : '';
+		$project_2_title = ! empty( $instance['project_2_title'] ) ? $instance['project_2_title'] : '';
+		$project_2_type = ! empty( $instance['project_2_type'] ) ? $instance['project_2_type'] : '';
+		$project_2_link = ! empty( $instance['project_2_link'] ) ? $instance['project_2_link'] : '';
+
+		// Project 3
+		$project_3_image = ! empty( $instance['project_3_image'] ) ? $instance['project_3_image'] : '';
+		$project_3_title = ! empty( $instance['project_3_title'] ) ? $instance['project_3_title'] : '';
+		$project_3_type = ! empty( $instance['project_3_type'] ) ? $instance['project_3_type'] : '';
+		$project_3_link = ! empty( $instance['project_3_link'] ) ? $instance['project_3_link'] : '';
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">عنوان القسم:</label>
@@ -437,7 +644,65 @@ class Nasaq_Portfolio_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'subtitle' ); ?>">وصف القسم:</label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'subtitle' ); ?>" name="<?php echo $this->get_field_name( 'subtitle' ); ?>" rows="3"><?php echo esc_textarea( $subtitle ); ?></textarea>
 		</p>
-		<p><em>يمكنك إضافة custom post type "portfolio" لإدارة المشاريع بشكل ديناميكي</em></p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">المشروع الأول</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_1_image' ); ?>">رابط صورة المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_1_image' ); ?>" name="<?php echo $this->get_field_name( 'project_1_image' ); ?>" type="text" value="<?php echo esc_url( $project_1_image ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_1_title' ); ?>">عنوان المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_1_title' ); ?>" name="<?php echo $this->get_field_name( 'project_1_title' ); ?>" type="text" value="<?php echo esc_attr( $project_1_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_1_type' ); ?>">نوع المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_1_type' ); ?>" name="<?php echo $this->get_field_name( 'project_1_type' ); ?>" type="text" value="<?php echo esc_attr( $project_1_type ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_1_link' ); ?>">رابط المشروع (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_1_link' ); ?>" name="<?php echo $this->get_field_name( 'project_1_link' ); ?>" type="text" value="<?php echo esc_url( $project_1_link ); ?>">
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">المشروع الثاني</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_2_image' ); ?>">رابط صورة المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_2_image' ); ?>" name="<?php echo $this->get_field_name( 'project_2_image' ); ?>" type="text" value="<?php echo esc_url( $project_2_image ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_2_title' ); ?>">عنوان المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_2_title' ); ?>" name="<?php echo $this->get_field_name( 'project_2_title' ); ?>" type="text" value="<?php echo esc_attr( $project_2_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_2_type' ); ?>">نوع المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_2_type' ); ?>" name="<?php echo $this->get_field_name( 'project_2_type' ); ?>" type="text" value="<?php echo esc_attr( $project_2_type ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_2_link' ); ?>">رابط المشروع (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_2_link' ); ?>" name="<?php echo $this->get_field_name( 'project_2_link' ); ?>" type="text" value="<?php echo esc_url( $project_2_link ); ?>">
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">المشروع الثالث</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_3_image' ); ?>">رابط صورة المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_3_image' ); ?>" name="<?php echo $this->get_field_name( 'project_3_image' ); ?>" type="text" value="<?php echo esc_url( $project_3_image ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_3_title' ); ?>">عنوان المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_3_title' ); ?>" name="<?php echo $this->get_field_name( 'project_3_title' ); ?>" type="text" value="<?php echo esc_attr( $project_3_title ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_3_type' ); ?>">نوع المشروع:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_3_type' ); ?>" name="<?php echo $this->get_field_name( 'project_3_type' ); ?>" type="text" value="<?php echo esc_attr( $project_3_type ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'project_3_link' ); ?>">رابط المشروع (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'project_3_link' ); ?>" name="<?php echo $this->get_field_name( 'project_3_link' ); ?>" type="text" value="<?php echo esc_url( $project_3_link ); ?>">
+		</p>
+
+		<p style="margin-top: 15px;"><em>المشاريع 4-6 تستخدم قيم افتراضية ويمكن إضافة المزيد لاحقاً</em></p>
 		<?php
 	}
 
@@ -445,6 +710,25 @@ class Nasaq_Portfolio_Widget extends WP_Widget {
 		$instance = array();
 		$instance['title'] = ! empty( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 		$instance['subtitle'] = ! empty( $new_instance['subtitle'] ) ? sanitize_textarea_field( $new_instance['subtitle'] ) : '';
+
+		// Project 1
+		$instance['project_1_image'] = ! empty( $new_instance['project_1_image'] ) ? esc_url_raw( $new_instance['project_1_image'] ) : '';
+		$instance['project_1_title'] = ! empty( $new_instance['project_1_title'] ) ? sanitize_text_field( $new_instance['project_1_title'] ) : '';
+		$instance['project_1_type'] = ! empty( $new_instance['project_1_type'] ) ? sanitize_text_field( $new_instance['project_1_type'] ) : '';
+		$instance['project_1_link'] = ! empty( $new_instance['project_1_link'] ) ? esc_url_raw( $new_instance['project_1_link'] ) : '';
+
+		// Project 2
+		$instance['project_2_image'] = ! empty( $new_instance['project_2_image'] ) ? esc_url_raw( $new_instance['project_2_image'] ) : '';
+		$instance['project_2_title'] = ! empty( $new_instance['project_2_title'] ) ? sanitize_text_field( $new_instance['project_2_title'] ) : '';
+		$instance['project_2_type'] = ! empty( $new_instance['project_2_type'] ) ? sanitize_text_field( $new_instance['project_2_type'] ) : '';
+		$instance['project_2_link'] = ! empty( $new_instance['project_2_link'] ) ? esc_url_raw( $new_instance['project_2_link'] ) : '';
+
+		// Project 3
+		$instance['project_3_image'] = ! empty( $new_instance['project_3_image'] ) ? esc_url_raw( $new_instance['project_3_image'] ) : '';
+		$instance['project_3_title'] = ! empty( $new_instance['project_3_title'] ) ? sanitize_text_field( $new_instance['project_3_title'] ) : '';
+		$instance['project_3_type'] = ! empty( $new_instance['project_3_type'] ) ? sanitize_text_field( $new_instance['project_3_type'] ) : '';
+		$instance['project_3_link'] = ! empty( $new_instance['project_3_link'] ) ? esc_url_raw( $new_instance['project_3_link'] ) : '';
+
 		return $instance;
 	}
 }
@@ -669,6 +953,27 @@ class Nasaq_Testimonials_Widget extends WP_Widget {
 
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : 'آراء عملائنا';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Testimonial 1
+		$testimonial_1_text = ! empty( $instance['testimonial_1_text'] ) ? $instance['testimonial_1_text'] : 'تجربة رائعة مع فريق نسق! أنجزوا مشروعنا في الوقت المحدد وبجودة عالية جداً. أنصح بشدة بالتعامل معهم.';
+		$testimonial_1_name = ! empty( $instance['testimonial_1_name'] ) ? $instance['testimonial_1_name'] : 'أحمد محمد';
+		$testimonial_1_position = ! empty( $instance['testimonial_1_position'] ) ? $instance['testimonial_1_position'] : 'مدير شركة تقنية';
+		$testimonial_1_avatar = ! empty( $instance['testimonial_1_avatar'] ) ? $instance['testimonial_1_avatar'] : 'https://via.placeholder.com/60x60/1a4d3e/ffffff?text=A';
+		$testimonial_1_rating = ! empty( $instance['testimonial_1_rating'] ) ? absint( $instance['testimonial_1_rating'] ) : 5;
+
+		// Testimonial 2
+		$testimonial_2_text = ! empty( $instance['testimonial_2_text'] ) ? $instance['testimonial_2_text'] : 'احترافية عالية في التعامل والتنفيذ. الموقع الذي صمموه لنا فاق توقعاتنا وساهم في زيادة مبيعاتنا بشكل ملحوظ.';
+		$testimonial_2_name = ! empty( $instance['testimonial_2_name'] ) ? $instance['testimonial_2_name'] : 'سارة علي';
+		$testimonial_2_position = ! empty( $instance['testimonial_2_position'] ) ? $instance['testimonial_2_position'] : 'صاحبة متجر إلكتروني';
+		$testimonial_2_avatar = ! empty( $instance['testimonial_2_avatar'] ) ? $instance['testimonial_2_avatar'] : 'https://via.placeholder.com/60x60/ff8c42/ffffff?text=S';
+		$testimonial_2_rating = ! empty( $instance['testimonial_2_rating'] ) ? absint( $instance['testimonial_2_rating'] ) : 5;
+
+		// Testimonial 3
+		$testimonial_3_text = ! empty( $instance['testimonial_3_text'] ) ? $instance['testimonial_3_text'] : 'فريق متعاون جداً ويفهم متطلبات العميل بسرعة. التطبيق الذي طوروه لنا يعمل بسلاسة ويخدم احتياجاتنا تماماً.';
+		$testimonial_3_name = ! empty( $instance['testimonial_3_name'] ) ? $instance['testimonial_3_name'] : 'خالد السعيد';
+		$testimonial_3_position = ! empty( $instance['testimonial_3_position'] ) ? $instance['testimonial_3_position'] : 'مدير عام';
+		$testimonial_3_avatar = ! empty( $instance['testimonial_3_avatar'] ) ? $instance['testimonial_3_avatar'] : 'https://via.placeholder.com/60x60/2d6a4f/ffffff?text=K';
+		$testimonial_3_rating = ! empty( $instance['testimonial_3_rating'] ) ? absint( $instance['testimonial_3_rating'] ) : 5;
 		?>
 
 		<div class="testimonials-content-wrapper">
@@ -684,38 +989,41 @@ class Nasaq_Testimonials_Widget extends WP_Widget {
 				</div>
 
 				<div class="testimonials-grid">
+					<!-- Testimonial 1 -->
 					<div class="testimonial-card">
-						<div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"تجربة رائعة مع فريق نسق! أنجزوا مشروعنا في الوقت المحدد وبجودة عالية جداً. أنصح بشدة بالتعامل معهم."</p>
+						<div class="testimonial-rating"><?php echo str_repeat( '⭐', max( 1, min( 5, $testimonial_1_rating ) ) ); ?></div>
+						<p class="testimonial-text">"<?php echo esc_html( $testimonial_1_text ); ?>"</p>
 						<div class="testimonial-author">
-							<img src="https://via.placeholder.com/60x60/1a4d3e/ffffff?text=A" alt="أحمد محمد" class="author-avatar">
+							<img src="<?php echo esc_url( $testimonial_1_avatar ); ?>" alt="<?php echo esc_attr( $testimonial_1_name ); ?>" class="author-avatar">
 							<div class="author-info">
-								<h4 class="author-name">أحمد محمد</h4>
-								<p class="author-position">مدير شركة تقنية</p>
+								<h4 class="author-name"><?php echo esc_html( $testimonial_1_name ); ?></h4>
+								<p class="author-position"><?php echo esc_html( $testimonial_1_position ); ?></p>
 							</div>
 						</div>
 					</div>
 
+					<!-- Testimonial 2 -->
 					<div class="testimonial-card">
-						<div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"احترافية عالية في التعامل والتنفيذ. الموقع الذي صمموه لنا فاق توقعاتنا وساهم في زيادة مبيعاتنا بشكل ملحوظ."</p>
+						<div class="testimonial-rating"><?php echo str_repeat( '⭐', max( 1, min( 5, $testimonial_2_rating ) ) ); ?></div>
+						<p class="testimonial-text">"<?php echo esc_html( $testimonial_2_text ); ?>"</p>
 						<div class="testimonial-author">
-							<img src="https://via.placeholder.com/60x60/ff8c42/ffffff?text=S" alt="سارة علي" class="author-avatar">
+							<img src="<?php echo esc_url( $testimonial_2_avatar ); ?>" alt="<?php echo esc_attr( $testimonial_2_name ); ?>" class="author-avatar">
 							<div class="author-info">
-								<h4 class="author-name">سارة علي</h4>
-								<p class="author-position">صاحبة متجر إلكتروني</p>
+								<h4 class="author-name"><?php echo esc_html( $testimonial_2_name ); ?></h4>
+								<p class="author-position"><?php echo esc_html( $testimonial_2_position ); ?></p>
 							</div>
 						</div>
 					</div>
 
+					<!-- Testimonial 3 -->
 					<div class="testimonial-card">
-						<div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-						<p class="testimonial-text">"فريق متعاون جداً ويفهم متطلبات العميل بسرعة. التطبيق الذي طوروه لنا يعمل بسلاسة ويخدم احتياجاتنا تماماً."</p>
+						<div class="testimonial-rating"><?php echo str_repeat( '⭐', max( 1, min( 5, $testimonial_3_rating ) ) ); ?></div>
+						<p class="testimonial-text">"<?php echo esc_html( $testimonial_3_text ); ?>"</p>
 						<div class="testimonial-author">
-							<img src="https://via.placeholder.com/60x60/2d6a4f/ffffff?text=K" alt="خالد السعيد" class="author-avatar">
+							<img src="<?php echo esc_url( $testimonial_3_avatar ); ?>" alt="<?php echo esc_attr( $testimonial_3_name ); ?>" class="author-avatar">
 							<div class="author-info">
-								<h4 class="author-name">خالد السعيد</h4>
-								<p class="author-position">مدير عام</p>
+								<h4 class="author-name"><?php echo esc_html( $testimonial_3_name ); ?></h4>
+								<p class="author-position"><?php echo esc_html( $testimonial_3_position ); ?></p>
 							</div>
 						</div>
 					</div>
@@ -730,6 +1038,27 @@ class Nasaq_Testimonials_Widget extends WP_Widget {
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
 		$subtitle = ! empty( $instance['subtitle'] ) ? $instance['subtitle'] : '';
+
+		// Testimonial 1
+		$testimonial_1_text = ! empty( $instance['testimonial_1_text'] ) ? $instance['testimonial_1_text'] : '';
+		$testimonial_1_name = ! empty( $instance['testimonial_1_name'] ) ? $instance['testimonial_1_name'] : '';
+		$testimonial_1_position = ! empty( $instance['testimonial_1_position'] ) ? $instance['testimonial_1_position'] : '';
+		$testimonial_1_avatar = ! empty( $instance['testimonial_1_avatar'] ) ? $instance['testimonial_1_avatar'] : '';
+		$testimonial_1_rating = ! empty( $instance['testimonial_1_rating'] ) ? $instance['testimonial_1_rating'] : '5';
+
+		// Testimonial 2
+		$testimonial_2_text = ! empty( $instance['testimonial_2_text'] ) ? $instance['testimonial_2_text'] : '';
+		$testimonial_2_name = ! empty( $instance['testimonial_2_name'] ) ? $instance['testimonial_2_name'] : '';
+		$testimonial_2_position = ! empty( $instance['testimonial_2_position'] ) ? $instance['testimonial_2_position'] : '';
+		$testimonial_2_avatar = ! empty( $instance['testimonial_2_avatar'] ) ? $instance['testimonial_2_avatar'] : '';
+		$testimonial_2_rating = ! empty( $instance['testimonial_2_rating'] ) ? $instance['testimonial_2_rating'] : '5';
+
+		// Testimonial 3
+		$testimonial_3_text = ! empty( $instance['testimonial_3_text'] ) ? $instance['testimonial_3_text'] : '';
+		$testimonial_3_name = ! empty( $instance['testimonial_3_name'] ) ? $instance['testimonial_3_name'] : '';
+		$testimonial_3_position = ! empty( $instance['testimonial_3_position'] ) ? $instance['testimonial_3_position'] : '';
+		$testimonial_3_avatar = ! empty( $instance['testimonial_3_avatar'] ) ? $instance['testimonial_3_avatar'] : '';
+		$testimonial_3_rating = ! empty( $instance['testimonial_3_rating'] ) ? $instance['testimonial_3_rating'] : '5';
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>">عنوان القسم:</label>
@@ -739,7 +1068,93 @@ class Nasaq_Testimonials_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id( 'subtitle' ); ?>">وصف القسم:</label>
 			<textarea class="widefat" id="<?php echo $this->get_field_id( 'subtitle' ); ?>" name="<?php echo $this->get_field_name( 'subtitle' ); ?>" rows="3"><?php echo esc_textarea( $subtitle ); ?></textarea>
 		</p>
-		<p><em>يمكنك إضافة custom post type "testimonials" لإدارة الشهادات بشكل ديناميكي</em></p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الشهادة الأولى</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_1_text' ); ?>">نص الشهادة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'testimonial_1_text' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_1_text' ); ?>" rows="3"><?php echo esc_textarea( $testimonial_1_text ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_1_name' ); ?>">اسم العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_1_name' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_1_name' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_1_name ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_1_position' ); ?>">منصب العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_1_position' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_1_position' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_1_position ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_1_avatar' ); ?>">رابط صورة العميل (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_1_avatar' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_1_avatar' ); ?>" type="text" value="<?php echo esc_url( $testimonial_1_avatar ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_1_rating' ); ?>">التقييم (1-5 نجوم):</label>
+			<select class="widefat" id="<?php echo $this->get_field_id( 'testimonial_1_rating' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_1_rating' ); ?>">
+				<option value="1" <?php selected( $testimonial_1_rating, '1' ); ?>>1 نجمة</option>
+				<option value="2" <?php selected( $testimonial_1_rating, '2' ); ?>>2 نجمة</option>
+				<option value="3" <?php selected( $testimonial_1_rating, '3' ); ?>>3 نجوم</option>
+				<option value="4" <?php selected( $testimonial_1_rating, '4' ); ?>>4 نجوم</option>
+				<option value="5" <?php selected( $testimonial_1_rating, '5' ); ?>>5 نجوم</option>
+			</select>
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الشهادة الثانية</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_2_text' ); ?>">نص الشهادة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'testimonial_2_text' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_2_text' ); ?>" rows="3"><?php echo esc_textarea( $testimonial_2_text ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_2_name' ); ?>">اسم العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_2_name' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_2_name' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_2_name ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_2_position' ); ?>">منصب العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_2_position' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_2_position' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_2_position ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_2_avatar' ); ?>">رابط صورة العميل (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_2_avatar' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_2_avatar' ); ?>" type="text" value="<?php echo esc_url( $testimonial_2_avatar ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_2_rating' ); ?>">التقييم (1-5 نجوم):</label>
+			<select class="widefat" id="<?php echo $this->get_field_id( 'testimonial_2_rating' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_2_rating' ); ?>">
+				<option value="1" <?php selected( $testimonial_2_rating, '1' ); ?>>1 نجمة</option>
+				<option value="2" <?php selected( $testimonial_2_rating, '2' ); ?>>2 نجمة</option>
+				<option value="3" <?php selected( $testimonial_2_rating, '3' ); ?>>3 نجوم</option>
+				<option value="4" <?php selected( $testimonial_2_rating, '4' ); ?>>4 نجوم</option>
+				<option value="5" <?php selected( $testimonial_2_rating, '5' ); ?>>5 نجوم</option>
+			</select>
+		</p>
+
+		<hr style="margin: 20px 0; border: 1px solid #ddd;">
+		<h4 style="margin: 10px 0;">الشهادة الثالثة</h4>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_3_text' ); ?>">نص الشهادة:</label>
+			<textarea class="widefat" id="<?php echo $this->get_field_id( 'testimonial_3_text' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_3_text' ); ?>" rows="3"><?php echo esc_textarea( $testimonial_3_text ); ?></textarea>
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_3_name' ); ?>">اسم العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_3_name' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_3_name' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_3_name ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_3_position' ); ?>">منصب العميل:</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_3_position' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_3_position' ); ?>" type="text" value="<?php echo esc_attr( $testimonial_3_position ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_3_avatar' ); ?>">رابط صورة العميل (اختياري):</label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'testimonial_3_avatar' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_3_avatar' ); ?>" type="text" value="<?php echo esc_url( $testimonial_3_avatar ); ?>">
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'testimonial_3_rating' ); ?>">التقييم (1-5 نجوم):</label>
+			<select class="widefat" id="<?php echo $this->get_field_id( 'testimonial_3_rating' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_3_rating' ); ?>">
+				<option value="1" <?php selected( $testimonial_3_rating, '1' ); ?>>1 نجمة</option>
+				<option value="2" <?php selected( $testimonial_3_rating, '2' ); ?>>2 نجمة</option>
+				<option value="3" <?php selected( $testimonial_3_rating, '3' ); ?>>3 نجوم</option>
+				<option value="4" <?php selected( $testimonial_3_rating, '4' ); ?>>4 نجوم</option>
+				<option value="5" <?php selected( $testimonial_3_rating, '5' ); ?>>5 نجوم</option>
+			</select>
+		</p>
 		<?php
 	}
 
@@ -747,6 +1162,28 @@ class Nasaq_Testimonials_Widget extends WP_Widget {
 		$instance = array();
 		$instance['title'] = ! empty( $new_instance['title'] ) ? sanitize_text_field( $new_instance['title'] ) : '';
 		$instance['subtitle'] = ! empty( $new_instance['subtitle'] ) ? sanitize_textarea_field( $new_instance['subtitle'] ) : '';
+
+		// Testimonial 1
+		$instance['testimonial_1_text'] = ! empty( $new_instance['testimonial_1_text'] ) ? sanitize_textarea_field( $new_instance['testimonial_1_text'] ) : '';
+		$instance['testimonial_1_name'] = ! empty( $new_instance['testimonial_1_name'] ) ? sanitize_text_field( $new_instance['testimonial_1_name'] ) : '';
+		$instance['testimonial_1_position'] = ! empty( $new_instance['testimonial_1_position'] ) ? sanitize_text_field( $new_instance['testimonial_1_position'] ) : '';
+		$instance['testimonial_1_avatar'] = ! empty( $new_instance['testimonial_1_avatar'] ) ? esc_url_raw( $new_instance['testimonial_1_avatar'] ) : '';
+		$instance['testimonial_1_rating'] = ! empty( $new_instance['testimonial_1_rating'] ) ? absint( $new_instance['testimonial_1_rating'] ) : 5;
+
+		// Testimonial 2
+		$instance['testimonial_2_text'] = ! empty( $new_instance['testimonial_2_text'] ) ? sanitize_textarea_field( $new_instance['testimonial_2_text'] ) : '';
+		$instance['testimonial_2_name'] = ! empty( $new_instance['testimonial_2_name'] ) ? sanitize_text_field( $new_instance['testimonial_2_name'] ) : '';
+		$instance['testimonial_2_position'] = ! empty( $new_instance['testimonial_2_position'] ) ? sanitize_text_field( $new_instance['testimonial_2_position'] ) : '';
+		$instance['testimonial_2_avatar'] = ! empty( $new_instance['testimonial_2_avatar'] ) ? esc_url_raw( $new_instance['testimonial_2_avatar'] ) : '';
+		$instance['testimonial_2_rating'] = ! empty( $new_instance['testimonial_2_rating'] ) ? absint( $new_instance['testimonial_2_rating'] ) : 5;
+
+		// Testimonial 3
+		$instance['testimonial_3_text'] = ! empty( $new_instance['testimonial_3_text'] ) ? sanitize_textarea_field( $new_instance['testimonial_3_text'] ) : '';
+		$instance['testimonial_3_name'] = ! empty( $new_instance['testimonial_3_name'] ) ? sanitize_text_field( $new_instance['testimonial_3_name'] ) : '';
+		$instance['testimonial_3_position'] = ! empty( $new_instance['testimonial_3_position'] ) ? sanitize_text_field( $new_instance['testimonial_3_position'] ) : '';
+		$instance['testimonial_3_avatar'] = ! empty( $new_instance['testimonial_3_avatar'] ) ? esc_url_raw( $new_instance['testimonial_3_avatar'] ) : '';
+		$instance['testimonial_3_rating'] = ! empty( $new_instance['testimonial_3_rating'] ) ? absint( $new_instance['testimonial_3_rating'] ) : 5;
+
 		return $instance;
 	}
 }
