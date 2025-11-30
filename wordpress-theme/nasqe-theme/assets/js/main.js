@@ -20,6 +20,12 @@
 
         // إضافة تأثيرات الهيدر عند التمرير
         initStickyHeader();
+
+        // تفعيل تأثيرات البطاقات
+        initCardAnimations();
+
+        // تفعيل عداد الإحصائيات
+        initStatsCounter();
     });
 
     /**
@@ -161,4 +167,75 @@ window.addEventListener('load', function() {
 // تحسين الأداء للموبايل
 if ('ontouchstart' in window) {
     document.body.classList.add('touch-device');
+}
+
+/**
+ * تفعيل تأثيرات البطاقات (Portfolio, Services, etc.)
+ */
+function initCardAnimations() {
+    const cards = document.querySelectorAll('.portfolio-item, .service-card, .testimonial-card');
+
+    cards.forEach(function(card) {
+        // إضافة class hover-lift
+        card.classList.add('hover-lift');
+
+        // إضافة overflow hidden للصور
+        const imageContainer = card.querySelector('.wp-block-post-featured-image, figure');
+        if (imageContainer) {
+            imageContainer.classList.add('hover-zoom');
+        }
+    });
+}
+
+/**
+ * عداد متحرك للإحصائيات
+ */
+function initStatsCounter() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+
+    if (statNumbers.length === 0) return;
+
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                animateCounter(entry.target);
+                entry.target.classList.add('counted');
+            }
+        });
+    }, observerOptions);
+
+    statNumbers.forEach(function(stat) {
+        observer.observe(stat);
+    });
+}
+
+/**
+ * تحريك العداد من 0 إلى القيمة النهائية
+ */
+function animateCounter(element) {
+    const target = parseInt(element.innerText.replace(/\D/g, ''));
+    const duration = 2000; // 2 seconds
+    const increment = target / (duration / 16); // 60 FPS
+    let current = 0;
+
+    const timer = setInterval(function() {
+        current += increment;
+        if (current >= target) {
+            element.innerText = formatNumber(target);
+            clearInterval(timer);
+        } else {
+            element.innerText = formatNumber(Math.floor(current));
+        }
+    }, 16);
+}
+
+/**
+ * تنسيق الأرقام مع الفواصل
+ */
+function formatNumber(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }

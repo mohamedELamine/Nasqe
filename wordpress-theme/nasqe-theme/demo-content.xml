@@ -234,5 +234,121 @@
 		<category domain="post_tag" nicename="performance"><![CDATA[أداء]]></category>
 	</item>
 
+	<!-- Portfolio Item 1 -->
+	<item>
+		<title>موقع شركة التقنية الحديثة</title>
+		<link>https://nasqe.com/portfolio/tech-company/</link>
+		<pubDate>Sun, 15 Oct 2024 10:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://nasqe.com/?portfolio=tech-company</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+			<p>موقع إلكتروني متكامل لشركة تقنية متخصصة في تطوير البرمجيات. يتميز الموقع بتصميم عصري وواجهة مستخدم سهلة.</p>
+
+			<h3>التحديات</h3>
+			<p>كانت الشركة بحاجة إلى موقع يعكس هويتها التقنية مع سهولة الاستخدام وسرعة الأداء.</p>
+
+			<h3>الحل</h3>
+			<p>قمنا بتطوير موقع بتقنية WordPress مع تصميم مخصص بالكامل، مع التركيز على الأداء وتجربة المستخدم.</p>
+
+			<h3>النتائج</h3>
+			<ul>
+				<li>زيادة بنسبة 150% في الزيارات</li>
+				<li>تحسين معدل التحويل بنسبة 80%</li>
+				<li>سرعة تحميل أقل من ثانيتين</li>
+			</ul>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[موقع إلكتروني احترافي لشركة تقنية متخصصة في تطوير البرمجيات]]></excerpt:encoded>
+		<wp:post_id>20</wp:post_id>
+		<wp:post_date>2024-10-15 10:00:00</wp:post_date>
+		<wp:post_date_gmt>2024-10-15 10:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>tech-company</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>portfolio</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="portfolio_category" nicename="web-development"><![CDATA[تطوير مواقع]]></category>
+		<category domain="portfolio_tag" nicename="wordpress"><![CDATA[ووردبريس]]></category>
+		<category domain="portfolio_tag" nicename="corporate"><![CDATA[مؤسسات]]></category>
+	</item>
+
+	<!-- Portfolio Item 2 -->
+	<item>
+		<title>متجر الأزياء العصرية</title>
+		<link>https://nasqe.com/portfolio/fashion-store/</link>
+		<pubDate>Thu, 01 Nov 2024 12:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://nasqe.com/?portfolio=fashion-store</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+			<p>متجر إلكتروني متكامل للأزياء والملابس، مع نظام دفع آمن وإدارة مخزون متقدمة.</p>
+
+			<h3>المميزات</h3>
+			<ul>
+				<li>واجهة عرض جذابة للمنتجات</li>
+				<li>نظام سلة تسوق متطور</li>
+				<li>تكامل مع بوابات الدفع</li>
+				<li>إدارة المخزون الآلية</li>
+			</ul>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[متجر إلكتروني احترافي للأزياء مع نظام دفع متكامل]]></excerpt:encoded>
+		<wp:post_id>21</wp:post_id>
+		<wp:post_date>2024-11-01 12:00:00</wp:post_date>
+		<wp:post_date_gmt>2024-11-01 12:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>fashion-store</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>portfolio</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="portfolio_category" nicename="ecommerce"><![CDATA[متاجر إلكترونية]]></category>
+		<category domain="portfolio_tag" nicename="woocommerce"><![CDATA[ووكومرس]]></category>
+		<category domain="portfolio_tag" nicename="fashion"><![CDATA[أزياء]]></category>
+	</item>
+
+	<!-- Portfolio Item 3 -->
+	<item>
+		<title>تطبيق إدارة المشاريع</title>
+		<link>https://nasqe.com/portfolio/project-management/</link>
+		<pubDate>Wed, 20 Sep 2024 14:00:00 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://nasqe.com/?portfolio=project-management</guid>
+		<description></description>
+		<content:encoded><![CDATA[
+			<p>منصة ويب متكاملة لإدارة المشاريع والفرق، مع أدوات تعاون وتتبع متقدمة.</p>
+
+			<h3>الوظائف الرئيسية</h3>
+			<ul>
+				<li>إدارة المهام والمشاريع</li>
+				<li>تقويم مشترك للفريق</li>
+				<li>تقارير ولوحات تحكم</li>
+				<li>إشعارات فورية</li>
+			</ul>
+		]]></content:encoded>
+		<excerpt:encoded><![CDATA[منصة ويب احترافية لإدارة المشاريع والفرق]]></excerpt:encoded>
+		<wp:post_id>22</wp:post_id>
+		<wp:post_date>2024-09-20 14:00:00</wp:post_date>
+		<wp:post_date_gmt>2024-09-20 14:00:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>project-management</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>portfolio</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="portfolio_category" nicename="web-apps"><![CDATA[تطبيقات ويب]]></category>
+		<category domain="portfolio_tag" nicename="saas"><![CDATA[سحابية]]></category>
+		<category domain="portfolio_tag" nicename="productivity"><![CDATA[إنتاجية]]></category>
+	</item>
+
 </channel>
 </rss>
