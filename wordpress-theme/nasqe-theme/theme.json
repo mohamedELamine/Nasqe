@@ -290,8 +290,23 @@
       "postTypes": ["page"]
     },
     {
+      "name": "page-about",
+      "title": "صفحة من نحن",
+      "postTypes": ["page"]
+    },
+    {
       "name": "page-services",
       "title": "صفحة الخدمات",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-portfolio",
+      "title": "صفحة الأعمال",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-contact",
+      "title": "صفحة التواصل",
       "postTypes": ["page"]
     }
   ]
