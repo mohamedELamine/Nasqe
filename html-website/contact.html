@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - نسق</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">نسق</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="services.html">الخدمات</a></li>
+                <li><a href="portfolio.html">أعمالنا</a></li>
+                <li><a href="contact.html" class="active">تواصل معنا</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem;">تواصل معنا</h1>
+            <p>نسعد بالرد على استفساراتك ومساعدتك</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                <!-- Contact Form -->
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">أرسل لنا رسالة</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" name="name" required placeholder="أدخل اسمك">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الجوال (اختياري)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+966 50 123 4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" name="subject" required placeholder="موضوع الرسالة">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" required placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال الرسالة</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">معلومات التواصل</h2>
+
+                    <div class="service-card" style="text-align: right; margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-dark-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">📞</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">الهاتف</h4>
+                                <a href="tel:+966501234567" style="color: var(--text-gray);">+966 50 123 4567</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" style="text-align: right; margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-dark-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">✉️</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">البريد الإلكتروني</h4>
+                                <a href="mailto:info@nasqe.com" style="color: var(--text-gray);">info@nasqe.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" style="text-align: right; margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-dark-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">📍</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">العنوان</h4>
+                                <p style="color: var(--text-gray); margin: 0;">الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-card" style="text-align: right;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 50px; height: 50px; background: var(--primary-dark-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white;">⏰</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.25rem;">ساعات العمل</h4>
+                                <p style="color: var(--text-gray); margin: 0;">السبت - الخميس: 9:00 ص - 5:00 م</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h3 style="margin-bottom: 1rem;">تابعنا على</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">📘</a>
+                            <a href="#" class="social-link">🐦</a>
+                            <a href="#" class="social-link">📷</a>
+                            <a href="#" class="social-link">💼</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>الأسئلة الشائعة</h2>
+                <p>إجابات على أكثر الأسئلة شيوعاً</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="service-card" style="margin-bottom: 1.5rem; text-align: right;">
+                    <h3 style="margin-bottom: 0.75rem;">كم تستغرق مدة تطوير الموقع؟</h3>
+                    <p style="color: var(--text-gray); margin: 0;">تختلف المدة حسب حجم المشروع وتعقيده. عادةً ما تستغرق المواقع البسيطة من 2-3 أسابيع، بينما المشاريع المعقدة قد تستغرق من 1-3 أشهر.</p>
+                </div>
+
+                <div class="service-card" style="margin-bottom: 1.5rem; text-align: right;">
+                    <h3 style="margin-bottom: 0.75rem;">هل تقدمون خدمات الاستضافة؟</h3>
+                    <p style="color: var(--text-gray); margin: 0;">نعم، نوفر خدمات استضافة موثوقة وسريعة مع جميع باقاتنا، أو يمكنك اختيار استضافتك الخاصة.</p>
+                </div>
+
+                <div class="service-card" style="margin-bottom: 1.5rem; text-align: right;">
+                    <h3 style="margin-bottom: 0.75rem;">هل الموقع سيكون متوافقاً مع الجوالات؟</h3>
+                    <p style="color: var(--text-gray); margin: 0;">بالتأكيد! جميع مواقعنا مصممة بتقنية Responsive Design لتعمل بشكل مثالي على جميع الأجهزة.</p>
+                </div>
+
+                <div class="service-card" style="text-align: right;">
+                    <h3 style="margin-bottom: 0.75rem;">هل تقدمون الدعم الفني بعد الإطلاق؟</h3>
+                    <p style="color: var(--text-gray); margin: 0;">نعم، نقدم دعماً فنياً شاملاً بعد إطلاق الموقع. مدة الدعم تعتمد على الباقة المختارة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>نسق</h3>
+                    <p>نقدم حلولاً رقمية متكاملة تساعد الشركات على النمو والتميز في العالم الرقمي</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">💼</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <p><a href="index.html">الرئيسية</a></p>
+                    <p><a href="about.html">من نحن</a></p>
+                    <p><a href="services.html">الخدمات</a></p>
+                    <p><a href="portfolio.html">أعمالنا</a></p>
+                    <p><a href="contact.html">تواصل معنا</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <p>📞 +966 50 123 4567</p>
+                    <p>✉️ info@nasqe.com</p>
+                    <p>📍 الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 نسق. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
