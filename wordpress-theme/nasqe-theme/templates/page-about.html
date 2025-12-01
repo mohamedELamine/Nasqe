@@ -3,35 +3,42 @@
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
 
-    <!-- قسم من نحن / About Section -->
-    <!-- wp:cover {"url":"https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920","dimRatio":70,"overlayColor":"primary-dark-green","contentPosition":"center center","isDark":true,"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"5rem"}}}} -->
-    <div class="wp-block-cover alignfull is-light" style="padding-top:8rem;padding-bottom:5rem">
-        <span aria-hidden="true" class="wp-block-cover__background has-primary-dark-green-background-color has-background-dim-70 has-background-dim"></span>
-        <img class="wp-block-cover__image-background" alt="" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920" data-object-fit="cover"/>
+    <!-- Hero Modern Section -->
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"5rem"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"linear-gradient(180deg,var(--wp--preset--color--gray-50) 0%,var(--wp--preset--color--white) 100%)"}},""className":"hero",">
+    <div class="wp-block-group alignfull hero has-background" style="background:linear-gradient(180deg,var(--wp--preset--color--gray-50) 0%,var(--wp--preset--color--white) 100%);margin-top:0;margin-bottom:0;padding-top:8rem;padding-bottom:5rem">
 
-        <div class="wp-block-cover__inner-container">
-            <!-- wp:heading {"textAlign":"center","level":1,"textColor":"white"} -->
-            <h1 class="wp-block-heading has-text-align-center has-white-color has-text-color">من نحن</h1>
+        <!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group hero-content">
+
+            <!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"color":{"text":"var:preset|color|primary"},"spacing":{"padding":{"top":"0.75rem","bottom":"0.75rem","left":"1.5rem","right":"1.5rem"},"margin":{"bottom":"2rem"}},"border":{"radius":"50px"},"typography":{"fontWeight":"600","fontSize":"0.9375rem"}},"backgroundColor":"gray-50","className":"hero-badge"} -->
+            <p class="has-text-align-center hero-badge has-gray-50-background-color has-text-color has-background has-link-color" style="border-radius:50px;color:var(--wp--preset--color--primary);margin-bottom:2rem;padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-weight:600">من نحن</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3.5rem","fontWeight":"900","lineHeight":"1.15"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
+            <h1 class="wp-block-heading has-text-align-center" style="margin-bottom:1.5rem;font-size:3.5rem;font-weight:900;line-height:1.15">نبني <mark style="background-color:transparent" class="has-inline-color has-primary-light-color">حلولاً رقمية</mark> على نسقٍ من الإتقان</h1>
             <!-- /wp:heading -->
 
-            <!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"large"} -->
-            <p class="has-text-align-center has-white-color has-text-color has-large-font-size">نبني حلولاً رقمية على نسقٍ من الإتقان</p>
+            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.8"},"spacing":{"margin":{"bottom":"3rem"}}},"textColor":"gray-600"} -->
+            <p class="has-text-align-center has-gray-600-color has-text-color" style="margin-bottom:3rem;font-size:1.25rem;line-height:1.8">رحلتنا في عالم البرمجة بدأت من رؤية بسيطة: تقديم حلول برمجية متقنة تساعد الشركات على بناء حضور رقمي قوي</p>
             <!-- /wp:paragraph -->
+
         </div>
+        <!-- /wp:group -->
+
     </div>
-    <!-- /wp:cover -->
+    <!-- /wp:group -->
 
     <!-- قسم القصة / Our Story -->
-    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:6rem;padding-bottom:6rem">
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:7rem;padding-bottom:7rem">
 
-        <!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+        <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":"5rem"}}} -->
         <div class="wp-block-columns alignwide are-vertically-aligned-center">
 
             <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
             <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-                <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-large has-custom-border"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800" alt="فريق نسق" style="border-radius:1rem"/></figure>
+                <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"1.5rem"}},"className":"card-animated"} -->
+                <figure class="wp-block-image size-large has-custom-border card-animated"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800" alt="فريق نسق" style="border-radius:1.5rem"/></figure>
                 <!-- /wp:image -->
             </div>
             <!-- /wp:column -->
@@ -39,20 +46,20 @@
             <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
             <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
 
-                <!-- wp:paragraph {"style":{"border":{"radius":"2rem"},"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem","right":"1.25rem","left":"1.25rem"}}},"backgroundColor":"primary-dark-green","textColor":"white","fontSize":"small"} -->
-                <p class="has-white-color has-primary-dark-green-background-color has-text-color has-background has-small-font-size" style="border-radius:2rem;padding-top:0.5rem;padding-right:1.25rem;padding-bottom:0.5rem;padding-left:1.25rem">قصتنا</p>
+                <!-- wp:paragraph {"style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"color":{"text":"var:preset|color|primary"},"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem","right":"1.25rem","left":"1.25rem"},"margin":{"bottom":"1.5rem"}},"border":{"radius":"50px"},"typography":{"fontWeight":"600","fontSize":"0.875rem"}},"backgroundColor":"gray-50"} -->
+                <p class="has-gray-50-background-color has-text-color has-background has-link-color" style="border-radius:50px;color:var(--wp--preset--color--primary);margin-bottom:1.5rem;padding-top:0.5rem;padding-right:1.25rem;padding-bottom:0.5rem;padding-left:1.25rem;font-size:0.875rem;font-weight:600">قصتنا</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}}} -->
-                <h2 class="wp-block-heading" style="margin-top:1.5rem;margin-bottom:1.5rem">رحلتنا في عالم البرمجة</h2>
+                <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"0","bottom":"1.5rem"}},"typography":{"fontSize":"2.5rem","fontWeight":"800"}}} -->
+                <h2 class="wp-block-heading" style="margin-top:0;margin-bottom:1.5rem;font-size:2.5rem;font-weight:800">رحلتنا في عالم البرمجة</h2>
                 <!-- /wp:heading -->
 
-                <!-- wp:paragraph -->
-                <p>بدأت نسق من رؤية بسيطة: تقديم حلول برمجية متقنة تساعد الشركات والأفراد على بناء حضور رقمي قوي. منذ انطلاقتنا، ساعدنا أكثر من 50 عميلاً في تحقيق أهدافهم الرقمية.</p>
+                <!-- wp:paragraph {"style":{"spacing":{"margin":{"bottom":"1rem"}},"typography":{"lineHeight":"1.8"}},"textColor":"gray-600"} -->
+                <p class="has-gray-600-color has-text-color" style="margin-bottom:1rem;line-height:1.8">بدأت نسق من رؤية بسيطة: تقديم حلول برمجية متقنة تساعد الشركات والأفراد على بناء حضور رقمي قوي. منذ انطلاقتنا، ساعدنا أكثر من 100 عميلاً في تحقيق أهدافهم الرقمية.</p>
                 <!-- /wp:paragraph -->
 
-                <!-- wp:paragraph -->
-                <p>نؤمن بأن البرمجة ليست مجرد كود، بل هي فن وعلم يجمع بين التقنية والإبداع. كل مشروع نعمل عليه يحمل بصمتنا الخاصة من الدقة والاهتمام بالتفاصيل.</p>
+                <!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.8"}},"textColor":"gray-600"} -->
+                <p class="has-gray-600-color has-text-color" style="line-height:1.8">نؤمن بأن البرمجة ليست مجرد كود، بل هي فن وعلم يجمع بين التقنية والإبداع. كل مشروع نعمل عليه يحمل بصمتنا الخاصة من الدقة والاهتمام بالتفاصيل.</p>
                 <!-- /wp:paragraph -->
 
             </div>
@@ -65,34 +72,51 @@
     <!-- /wp:group -->
 
     <!-- قسم القيم / Our Values -->
-    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"backgroundColor":"bg-light","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-bg-light-background-color has-background" style="padding-top:6rem;padding-bottom:6rem">
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem"}}},"className":"bg-light","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull bg-light" style="padding-top:7rem;padding-bottom:7rem">
 
-        <!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
-        <h2 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">قيمنا ومبادئنا</h2>
-        <!-- /wp:heading -->
+        <!-- Section Header -->
+        <!-- wp:group {"className":"section-header","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header">
+            <!-- wp:paragraph {"align":"center","className":"section-badge"} -->
+            <p class="has-text-align-center section-badge">قيمنا</p>
+            <!-- /wp:paragraph -->
 
-        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
-        <p class="has-text-align-center" style="margin-bottom:4rem">المبادئ التي نسير عليها في كل مشروع</p>
-        <!-- /wp:paragraph -->
+            <!-- wp:heading {"textAlign":"center","className":"section-title","style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+            <h2 class="wp-block-heading has-text-align-center section-title" style="margin-bottom:1rem">المبادئ التي نسير عليها</h2>
+            <!-- /wp:heading -->
 
+            <!-- wp:paragraph {"align":"center","className":"section-description","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
+            <p class="has-text-align-center section-description" style="margin-bottom:4rem">القيم التي نؤمن بها في كل مشروع</p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- Values Grid -->
         <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"2rem"}}} -->
         <div class="wp-block-columns alignwide">
 
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem"}}} -->
-                    <p class="has-text-align-center" style="font-size:3rem">🎯</p>
-                    <!-- /wp:paragraph -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">الإتقان</h4>
+                    <!-- wp:html -->
+                    <div class="service-icon-wrapper" style="margin-bottom: 1.5rem;">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="24" cy="24" r="4" fill="currentColor"/>
+                            <path d="M24 4V12M24 36V44M44 24H36M12 24H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <!-- /wp:html -->
+
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">الإتقان</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">نهتم بأدق التفاصيل في كل مشروع نعمل عليه</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نهتم بأدق التفاصيل في كل مشروع نعمل عليه لضمان أعلى جودة</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -101,18 +125,24 @@
 
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem"}}} -->
-                    <p class="has-text-align-center" style="font-size:3rem">⚡</p>
-                    <!-- /wp:paragraph -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">السرعة</h4>
+                    <!-- wp:html -->
+                    <div class="service-icon-wrapper" style="margin-bottom: 1.5rem;">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4L28 16L40 20L28 24L24 36L20 24L8 20L20 16L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M38 10L40 14L44 16L40 18L38 22L36 18L32 16L36 14L38 10Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <!-- /wp:html -->
+
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">السرعة</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">نلتزم بالمواعيد ونسلم المشاريع في وقتها</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نلتزم بالمواعيد ونسلم المشاريع في الوقت المحدد</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -121,18 +151,26 @@
 
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"3rem"}}} -->
-                    <p class="has-text-align-center" style="font-size:3rem">🤝</p>
-                    <!-- /wp:paragraph -->
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">الشراكة</h4>
+                    <!-- wp:html -->
+                    <div class="service-icon-wrapper" style="margin-bottom: 1.5rem;">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 28C20 31.3137 17.3137 34 14 34C10.6863 34 8 31.3137 8 28C8 24.6863 10.6863 22 14 22C17.3137 22 20 24.6863 20 28Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M40 28C40 31.3137 37.3137 34 34 34C30.6863 34 28 31.3137 28 28C28 24.6863 30.6863 22 34 22C37.3137 22 40 24.6863 40 28Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M30 16C30 19.3137 27.3137 22 24 22C20.6863 22 18 19.3137 18 16C18 12.6863 20.6863 10 24 10C27.3137 10 30 12.6863 30 16Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 22V28M20 28H14M34 28H28" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <!-- /wp:html -->
+
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">الشراكة</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">نتعامل مع عملائنا كشركاء نجاح</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نتعامل مع عملائنا كشركاء نجاح ونبني علاقات طويلة الأمد</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -145,74 +183,11 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- قسم الفريق / Our Team -->
-    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:6rem;padding-bottom:6rem">
+    <!-- Stats Section -->
+    <!-- wp:pattern {"slug":"nasqe/stats-section"} /-->
 
-        <!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
-        <h2 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">فريق العمل</h2>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
-        <p class="has-text-align-center" style="margin-bottom:4rem">خبراء متخصصون في مجالاتهم</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:columns {"align":"wide"} -->
-        <div class="wp-block-columns alignwide">
-
-            <!-- wp:column -->
-            <div class="wp-block-column">
-                <!-- wp:image {"sizeSlug":"medium","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-medium has-custom-border"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" alt="عضو الفريق" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-
-                <!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
-                <h4 class="wp-block-heading has-text-align-center" style="margin-top:1.5rem">محمد العمين</h4>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph {"align":"center","textColor":"text-gray"} -->
-                <p class="has-text-align-center has-text-gray-color has-text-color">مطور Full Stack</p>
-                <!-- /wp:paragraph -->
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column -->
-            <div class="wp-block-column">
-                <!-- wp:image {"sizeSlug":"medium","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-medium has-custom-border"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400" alt="عضو الفريق" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-
-                <!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
-                <h4 class="wp-block-heading has-text-align-center" style="margin-top:1.5rem">سارة أحمد</h4>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph {"align":"center","textColor":"text-gray"} -->
-                <p class="has-text-align-center has-text-gray-color has-text-color">مصممة UI/UX</p>
-                <!-- /wp:paragraph -->
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column -->
-            <div class="wp-block-column">
-                <!-- wp:image {"sizeSlug":"medium","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-medium has-custom-border"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400" alt="عضو الفريق" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-
-                <!-- wp:heading {"textAlign":"center","level":4,"style":{"spacing":{"margin":{"top":"1.5rem"}}}} -->
-                <h4 class="wp-block-heading has-text-align-center" style="margin-top:1.5rem">أحمد خالد</h4>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph {"align":"center","textColor":"text-gray"} -->
-                <p class="has-text-align-center has-text-gray-color has-text-color">مطور WordPress</p>
-                <!-- /wp:paragraph -->
-            </div>
-            <!-- /wp:column -->
-
-        </div>
-        <!-- /wp:columns -->
-
-    </div>
-    <!-- /wp:group -->
+    <!-- CTA Section -->
+    <!-- wp:pattern {"slug":"nasqe/cta-section"} /-->
 
 </main>
 <!-- /wp:group -->

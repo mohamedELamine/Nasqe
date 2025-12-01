@@ -3,282 +3,256 @@
 <!-- wp:group {"tagName":"main","layout":{"type":"constrained"}} -->
 <main class="wp-block-group">
 
-    <!-- قسم العنوان -->
-    <!-- wp:cover {"gradient":"hero-gradient","contentPosition":"center center","isDark":false,"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"5rem"}}}} -->
-    <div class="wp-block-cover alignfull is-light" style="padding-top:6rem;padding-bottom:5rem">
-        <span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim has-background-gradient has-hero-gradient-gradient-background"></span>
+    <!-- Hero Modern Section -->
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"8rem","bottom":"5rem"},"margin":{"top":"0","bottom":"0"}},"color":{"gradient":"linear-gradient(180deg,var(--wp--preset--color--gray-50) 0%,var(--wp--preset--color--white) 100%)"}},""className":"hero",">
+    <div class="wp-block-group alignfull hero has-background" style="background:linear-gradient(180deg,var(--wp--preset--color--gray-50) 0%,var(--wp--preset--color--white) 100%);margin-top:0;margin-bottom:0;padding-top:8rem;padding-bottom:5rem">
 
-        <div class="wp-block-cover__inner-container">
-            <!-- wp:heading {"textAlign":"center","level":1} -->
-            <h1 class="wp-block-heading has-text-align-center">خدماتنا</h1>
+        <!-- wp:group {"className":"hero-content","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group hero-content">
+
+            <!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|primary"}}},"color":{"text":"var:preset|color|primary"},"spacing":{"padding":{"top":"0.75rem","bottom":"0.75rem","left":"1.5rem","right":"1.5rem"},"margin":{"bottom":"2rem"}},"border":{"radius":"50px"},"typography":{"fontWeight":"600","fontSize":"0.9375rem"}},"backgroundColor":"gray-50","className":"hero-badge"} -->
+            <p class="has-text-align-center hero-badge has-gray-50-background-color has-text-color has-background has-link-color" style="border-radius:50px;color:var(--wp--preset--color--primary);margin-bottom:2rem;padding-top:0.75rem;padding-right:1.5rem;padding-bottom:0.75rem;padding-left:1.5rem;font-size:0.9375rem;font-weight:600">خدماتنا</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3.5rem","fontWeight":"900","lineHeight":"1.15"},"spacing":{"margin":{"bottom":"1.5rem"}}}} -->
+            <h1 class="wp-block-heading has-text-align-center" style="margin-bottom:1.5rem;font-size:3.5rem;font-weight:900;line-height:1.15">حلول رقمية <mark style="background-color:transparent" class="has-inline-color has-primary-light-color">شاملة</mark> لجميع احتياجاتك</h1>
             <!-- /wp:heading -->
 
-            <!-- wp:paragraph {"align":"center","fontSize":"large"} -->
-            <p class="has-text-align-center has-large-font-size">حلول برمجية متكاملة لنجاح أعمالك الرقمية</p>
+            <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.25rem","lineHeight":"1.8"},"spacing":{"margin":{"bottom":"3rem"}}},"textColor":"gray-600"} -->
+            <p class="has-text-align-center has-gray-600-color has-text-color" style="margin-bottom:3rem;font-size:1.25rem;line-height:1.8">نقدم مجموعة متكاملة من الخدمات الرقمية لتحقيق أهدافك التجارية وتعزيز حضورك الرقمي</p>
+            <!-- /wp:paragraph -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Services Section -->
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:7rem;padding-bottom:7rem">
+
+        <!-- Services Grid -->
+        <!-- wp:html -->
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M4 16C4 14.8954 4.89543 14 6 14H42C43.1046 14 44 14.8954 44 16V18H4V16Z" fill="currentColor"/>
+                        <circle cx="10" cy="16" r="1" fill="white"/>
+                        <circle cx="14" cy="16" r="1" fill="white"/>
+                        <circle cx="18" cy="16" r="1" fill="white"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">تصميم المواقع</h3>
+                <p class="service-description">نصمم مواقع إلكترونية احترافية ومتجاوبة تعكس هوية علامتك التجارية وتجذب عملاءك المستهدفين بتصاميم عصرية</p>
+                <ul class="service-features">
+                    <li>✓ تصميم responsive متكامل</li>
+                    <li>✓ تجربة مستخدم UX/UI</li>
+                    <li>✓ تحسين SEO</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="12" y="6" width="24" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+                        <path d="M18 30L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="24" cy="36" r="2" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">تطبيقات الجوال</h3>
+                <p class="service-description">تطوير تطبيقات جوال متميزة لأنظمة iOS وAndroid تعزز من تفاعل عملائك مع علامتك التجارية بتجربة سلسة</p>
+                <ul class="service-features">
+                    <li>✓ تطبيقات Native</li>
+                    <li>✓ React Native / Flutter</li>
+                    <li>✓ نشر على المتاجر</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 4L6 14V22C6 31 13 39 24 44C35 39 42 31 42 22V14L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        <path d="M24 18V28M24 34H24.02" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">حلول أمنية</h3>
+                <p class="service-description">نوفر أعلى معايير الأمان لحماية بياناتك ومعلومات عملائك مع حلول متقدمة للحماية السيبرانية والنسخ الاحتياطي</p>
+                <ul class="service-features">
+                    <li>✓ SSL & HTTPS</li>
+                    <li>✓ حماية من الاختراق</li>
+                    <li>✓ نسخ احتياطي تلقائي</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M24 12V24L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">التسويق الرقمي</h3>
+                <p class="service-description">نساعدك في الوصول إلى جمهورك المستهدف من خلال استراتيجيات تسويق رقمية فعالة عبر جميع القنوات الرقمية</p>
+                <ul class="service-features">
+                    <li>✓ إدارة وسائل التواصل</li>
+                    <li>✓ إعلانات مدفوعة</li>
+                    <li>✓ تحليلات وتقارير</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M8 12C8 9.79086 9.79086 8 12 8H36C38.2091 8 40 9.79086 40 12V36C40 38.2091 38.2091 40 36 40H12C9.79086 40 8 38.2091 8 36V12Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M16 20H32M16 28H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">المتاجر الإلكترونية</h3>
+                <p class="service-description">إنشاء متاجر إلكترونية احترافية مع أنظمة دفع آمنة وإدارة مخزون متقدمة لزيادة مبيعاتك وتوسيع نطاق عملك</p>
+                <ul class="service-features">
+                    <li>✓ WooCommerce / Shopify</li>
+                    <li>✓ بوابات دفع متعددة</li>
+                    <li>✓ إدارة المخزون</li>
+                </ul>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="service-card card-animated">
+                <div class="service-icon-wrapper">
+                    <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 40C32.8366 40 40 32.8366 40 24C40 15.1634 32.8366 8 24 8C15.1634 8 8 15.1634 8 24C8 32.8366 15.1634 40 24 40Z" stroke="currentColor" stroke-width="2"/>
+                        <path d="M24 16V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">الصيانة والدعم</h3>
+                <p class="service-description">نوفر خدمات صيانة ودعم فني مستمر لضمان عمل موقعك أو تطبيقك بكفاءة عالية على مدار الساعة مع استجابة سريعة</p>
+                <ul class="service-features">
+                    <li>✓ دعم 24/7</li>
+                    <li>✓ تحديثات دورية</li>
+                    <li>✓ حل المشاكل الفنية</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /wp:html -->
+
+    </div>
+    <!-- /wp:group -->
+
+    <!-- Process Section -->
+    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"7rem","bottom":"7rem"}}},"className":"bg-light","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group alignfull bg-light" style="padding-top:7rem;padding-bottom:7rem">
+
+        <!-- Section Header -->
+        <!-- wp:group {"className":"section-header","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group section-header">
+            <!-- wp:paragraph {"align":"center","className":"section-badge"} -->
+            <p class="has-text-align-center section-badge">عملية العمل</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:heading {"textAlign":"center","className":"section-title","style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+            <h2 class="wp-block-heading has-text-align-center section-title" style="margin-bottom:1rem">كيف نعمل؟</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"align":"center","className":"section-description","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
+            <p class="has-text-align-center section-description" style="margin-bottom:4rem">خطوات بسيطة لبدء مشروعك معنا</p>
             <!-- /wp:paragraph -->
         </div>
-    </div>
-    <!-- /wp:cover -->
+        <!-- /wp:group -->
 
-    <!-- الخدمات التفصيلية -->
-    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"4rem"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:6rem;padding-bottom:4rem">
-
-        <!-- الخدمة 1: تطوير ووردبريس -->
-        <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
-        <div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:6rem">
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-                <!-- wp:paragraph {"style":{"border":{"radius":"2rem"},"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem","right":"1.25rem","left":"1.25rem"}}},"backgroundColor":"primary-dark-green","textColor":"white","fontSize":"small"} -->
-                <p class="has-white-color has-primary-dark-green-background-color has-text-color has-background has-small-font-size" style="border-radius:2rem;padding-top:0.5rem;padding-right:1.25rem;padding-bottom:0.5rem;padding-left:1.25rem">الخدمة الأولى</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}}} -->
-                <h2 class="wp-block-heading" style="margin-top:1.5rem;margin-bottom:1.5rem">تطوير مواقع ووردبريس</h2>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph -->
-                <p>نبني مواقع ووردبريس احترافية مخصصة حسب احتياجاتك، من مواقع الشركات إلى المتاجر الإلكترونية والمدونات. نستخدم أحدث التقنيات لضمان موقع سريع، آمن، وسهل الإدارة.</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:list -->
-                <ul>
-                    <!-- wp:list-item -->
-                    <li>قوالب ووردبريس مخصصة</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تطوير إضافات WordPress Plugins</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تحويل تصاميم إلى مواقع ووردبريس</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>صيانة ودعم فني مستمر</li>
-                    <!-- /wp:list-item -->
-                </ul>
-                <!-- /wp:list -->
-
-                <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-                <div class="wp-block-buttons" style="margin-top:2rem">
-                    <!-- wp:button {"backgroundColor":"primary-dark-green"} -->
-                    <div class="wp-block-button"><a class="wp-block-button__link has-primary-dark-green-background-color has-background wp-element-button" href="#contact">اطلب الخدمة</a></div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
-
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-                <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-large has-custom-border"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=800" alt="تطوير ووردبريس" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-            </div>
-            <!-- /wp:column -->
-
-        </div>
-        <!-- /wp:columns -->
-
-        <!-- الخدمة 2: صفحات الهبوط -->
-        <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
-        <div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:6rem">
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-                <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-large has-custom-border"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800" alt="صفحات هبوط" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-                <!-- wp:paragraph {"style":{"border":{"radius":"2rem"},"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem","right":"1.25rem","left":"1.25rem"}}},"backgroundColor":"secondary-orange","textColor":"white","fontSize":"small"} -->
-                <p class="has-white-color has-secondary-orange-background-color has-text-color has-background has-small-font-size" style="border-radius:2rem;padding-top:0.5rem;padding-right:1.25rem;padding-bottom:0.5rem;padding-left:1.25rem">الخدمة الثانية</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}}} -->
-                <h2 class="wp-block-heading" style="margin-top:1.5rem;margin-bottom:1.5rem">تصميم صفحات الهبوط</h2>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph -->
-                <p>صفحات هبوط (Landing Pages) مصممة خصيصاً لتحويل الزوار إلى عملاء. نركز على تجربة المستخدم والتصميم الجذاب لزيادة معدلات التحويل.</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:list -->
-                <ul>
-                    <!-- wp:list-item -->
-                    <li>تصميم UI/UX احترافي</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>نسق بصري واضح ومسار بسيط</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تحسين معدلات التحويل (CRO)</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تكامل مع أدوات التسويق</li>
-                    <!-- /wp:list-item -->
-                </ul>
-                <!-- /wp:list -->
-
-                <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-                <div class="wp-block-buttons" style="margin-top:2rem">
-                    <!-- wp:button {"backgroundColor":"secondary-orange"} -->
-                    <div class="wp-block-button"><a class="wp-block-button__link has-secondary-orange-background-color has-background wp-element-button" href="#contact">اطلب الخدمة</a></div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
-
-            </div>
-            <!-- /wp:column -->
-
-        </div>
-        <!-- /wp:columns -->
-
-        <!-- الخدمة 3: تحسين الأداء -->
-        <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"margin":{"bottom":"6rem"}}}} -->
-        <div class="wp-block-columns alignwide are-vertically-aligned-center" style="margin-bottom:6rem">
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-
-                <!-- wp:paragraph {"style":{"border":{"radius":"2rem"},"spacing":{"padding":{"top":"0.5rem","bottom":"0.5rem","right":"1.25rem","left":"1.25rem"}}},"backgroundColor":"primary-green","textColor":"white","fontSize":"small"} -->
-                <p class="has-white-color has-primary-green-background-color has-text-color has-background has-small-font-size" style="border-radius:2rem;padding-top:0.5rem;padding-right:1.25rem;padding-bottom:0.5rem;padding-left:1.25rem">الخدمة الثالثة</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:heading {"level":2,"style":{"spacing":{"margin":{"top":"1.5rem","bottom":"1.5rem"}}}} -->
-                <h2 class="wp-block-heading" style="margin-top:1.5rem;margin-bottom:1.5rem">تحسين الأداء والـ SEO</h2>
-                <!-- /wp:heading -->
-
-                <!-- wp:paragraph -->
-                <p>نسرّع موقعك ونحسن ظهوره في محركات البحث. نطبق أفضل ممارسات الأداء والـ SEO لضمان تجربة مستخدم ممتازة وترتيب أعلى في Google.</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:list -->
-                <ul>
-                    <!-- wp:list-item -->
-                    <li>تسريع وقت تحميل الصفحات</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تحسين SEO التقني والمحتوى</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>ضغط الصور وتحسين الملفات</li>
-                    <!-- /wp:list-item -->
-
-                    <!-- wp:list-item -->
-                    <li>تقارير أداء شهرية</li>
-                    <!-- /wp:list-item -->
-                </ul>
-                <!-- /wp:list -->
-
-                <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"2rem"}}}} -->
-                <div class="wp-block-buttons" style="margin-top:2rem">
-                    <!-- wp:button {"backgroundColor":"primary-green"} -->
-                    <div class="wp-block-button"><a class="wp-block-button__link has-primary-green-background-color has-background wp-element-button" href="#contact">اطلب الخدمة</a></div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
-
-            </div>
-            <!-- /wp:column -->
-
-            <!-- wp:column {"verticalAlignment":"center","width":"50%"} -->
-            <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:50%">
-                <!-- wp:image {"sizeSlug":"large","linkDestination":"none","style":{"border":{"radius":"1rem"}}} -->
-                <figure class="wp-block-image size-large has-custom-border"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800" alt="تحسين الأداء" style="border-radius:1rem"/></figure>
-                <!-- /wp:image -->
-            </div>
-            <!-- /wp:column -->
-
-        </div>
-        <!-- /wp:columns -->
-
-    </div>
-    <!-- /wp:group -->
-
-    <!-- قسم العملية / Process -->
-    <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"6rem","bottom":"6rem"}}},"backgroundColor":"bg-light","layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignfull has-bg-light-background-color has-background" style="padding-top:6rem;padding-bottom:6rem">
-
-        <!-- wp:heading {"textAlign":"center","level":2,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
-        <h2 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">كيف نعمل؟</h2>
-        <!-- /wp:heading -->
-
-        <!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"bottom":"4rem"}}}} -->
-        <p class="has-text-align-center" style="margin-bottom:4rem">خطوات بسيطة لبدء مشروعك معنا</p>
-        <!-- /wp:paragraph -->
-
-        <!-- wp:columns {"align":"wide"} -->
+        <!-- Process Steps -->
+        <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"2rem"}}} -->
         <div class="wp-block-columns alignwide">
 
+            <!-- Step 1 -->
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white"} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:heading {"textAlign":"center","level":1,"textColor":"primary-dark-green","fontSize":"xxx-large"} -->
-                    <h1 class="wp-block-heading has-text-align-center has-primary-dark-green-color has-text-color has-xxx-large-font-size">1</h1>
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
+
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary"} -->
+                    <h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color" style="font-size:3rem;font-weight:800">1</h1>
                     <!-- /wp:heading -->
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">التواصل والاستشارة</h4>
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">التواصل والاستشارة</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">نتحدث معك لفهم احتياجاتك وأهدافك</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نتحدث معك لفهم احتياجاتك وأهدافك بدقة</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
             </div>
             <!-- /wp:column -->
 
+            <!-- Step 2 -->
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white"} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:heading {"textAlign":"center","level":1,"textColor":"primary-dark-green","fontSize":"xxx-large"} -->
-                    <h1 class="wp-block-heading has-text-align-center has-primary-dark-green-color has-text-color has-xxx-large-font-size">2</h1>
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
+
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary"} -->
+                    <h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color" style="font-size:3rem;font-weight:800">2</h1>
                     <!-- /wp:heading -->
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">التخطيط والتصميم</h4>
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">التخطيط والتصميم</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">نضع خطة واضحة ونصمم الحل المناسب</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نضع خطة واضحة ونصمم الحل المناسب لك</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
             </div>
             <!-- /wp:column -->
 
+            <!-- Step 3 -->
             <!-- wp:column -->
             <div class="wp-block-column">
-                <!-- wp:group {"style":{"border":{"radius":"1rem"},"spacing":{"padding":{"top":"2.5rem","bottom":"2.5rem","right":"2rem","left":"2rem"}}},"backgroundColor":"white"} -->
-                <div class="wp-block-group has-white-background-color has-background" style="border-radius:1rem;padding-top:2.5rem;padding-right:2rem;padding-bottom:2.5rem;padding-left:2rem">
-                    <!-- wp:heading {"textAlign":"center","level":1,"textColor":"primary-dark-green","fontSize":"xxx-large"} -->
-                    <h1 class="wp-block-heading has-text-align-center has-primary-dark-green-color has-text-color has-xxx-large-font-size">3</h1>
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
+
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary"} -->
+                    <h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color" style="font-size:3rem;font-weight:800">3</h1>
                     <!-- /wp:heading -->
 
-                    <!-- wp:heading {"textAlign":"center","level":4} -->
-                    <h4 class="wp-block-heading has-text-align-center">التطوير والتسليم</h4>
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">التطوير والتنفيذ</h3>
                     <!-- /wp:heading -->
 
-                    <!-- wp:paragraph {"align":"center"} -->
-                    <p class="has-text-align-center">ننفذ المشروع ونسلمه جاهزاً للعمل</p>
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">نبدأ العمل بكفاءة عالية وجودة احترافية</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:group -->
+            </div>
+            <!-- /wp:column -->
+
+            <!-- Step 4 -->
+            <!-- wp:column -->
+            <div class="wp-block-column">
+                <!-- wp:group {"style":{"spacing":{"padding":{"top":"3rem","bottom":"3rem","right":"2.5rem","left":"2.5rem"}},"border":{"radius":"1.5rem"}},"backgroundColor":"white","className":"card-animated","layout":{"type":"constrained"}} -->
+                <div class="wp-block-group card-animated has-white-background-color has-background" style="border-radius:1.5rem;padding-top:3rem;padding-right:2.5rem;padding-bottom:3rem;padding-left:2.5rem">
+
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"3rem","fontWeight":"800"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary"} -->
+                    <h1 class="wp-block-heading has-text-align-center has-primary-color has-text-color has-link-color" style="font-size:3rem;font-weight:800">4</h1>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"margin":{"bottom":"1rem"}}}} -->
+                    <h3 class="wp-block-heading has-text-align-center" style="margin-bottom:1rem">التسليم والدعم</h3>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph {"align":"center","textColor":"gray-600"} -->
+                    <p class="has-text-align-center has-gray-600-color has-text-color">ننفذ المشروع ونسلمه جاهزاً مع دعم مستمر</p>
                     <!-- /wp:paragraph -->
                 </div>
                 <!-- /wp:group -->
@@ -290,6 +264,9 @@
 
     </div>
     <!-- /wp:group -->
+
+    <!-- CTA Section -->
+    <!-- wp:pattern {"slug":"nasqe/cta-section"} /-->
 
 </main>
 <!-- /wp:group -->
