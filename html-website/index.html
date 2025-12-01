@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -19,14 +19,17 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">نسق</div>
+            <div class="logo">
+                <span class="logo-icon">⬡</span>
+                <span class="logo-text">نسق</span>
+            </div>
 
             <ul class="nav-menu">
                 <li><a href="index.html" class="active">الرئيسية</a></li>
                 <li><a href="about.html">من نحن</a></li>
                 <li><a href="services.html">الخدمات</a></li>
                 <li><a href="portfolio.html">أعمالنا</a></li>
-                <li><a href="contact.html">تواصل معنا</a></li>
+                <li><a href="contact.html" class="nav-cta">تواصل معنا</a></li>
             </ul>
 
             <div class="menu-toggle">
@@ -39,190 +42,423 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-background">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+            <div class="hero-shape hero-shape-3"></div>
+        </div>
         <div class="container">
-            <h1>حلول رقمية متكاملة لنجاح أعمالك</h1>
-            <p>نساعدك في بناء حضور رقمي قوي من خلال تصميم مواقع احترافية وتطبيقات ويب متقدمة</p>
-            <a href="contact.html" class="btn btn-primary"><span>ابدأ الآن</span></a>
+            <div class="hero-content">
+                <div class="hero-badge">🚀 حلول رقمية مبتكرة</div>
+                <h1 class="hero-title">
+                    نصنع تجارب رقمية
+                    <span class="gradient-text">استثنائية</span>
+                </h1>
+                <p class="hero-description">
+                    نساعدك في بناء حضور رقمي قوي من خلال تصميم مواقع احترافية وتطبيقات ويب متقدمة
+                    تضع علامتك التجارية في المقدمة
+                </p>
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span>ابدأ مشروعك الآن</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline btn-large">
+                        <span>استعرض أعمالنا</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">150+</div>
+                        <div class="hero-stat-label">مشروع ناجح</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">100+</div>
+                        <div class="hero-stat-label">عميل راضٍ</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">7+</div>
+                        <div class="hero-stat-label">سنوات خبرة</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="bg-light">
+    <section id="services" class="services-section">
         <div class="container">
-            <div class="section-title">
-                <h2>خدماتنا</h2>
-                <p>نقدم حلولاً رقمية شاملة تلبي احتياجات عملك</p>
+            <div class="section-header">
+                <span class="section-badge">خدماتنا</span>
+                <h2 class="section-title">حلول رقمية شاملة</h2>
+                <p class="section-description">نقدم مجموعة متكاملة من الخدمات الرقمية لتحقيق أهدافك</p>
             </div>
 
             <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>تصميم المواقع</h3>
-                    <p>نصمم مواقع إلكترونية احترافية ومتجاوبة تعكس هوية علامتك التجارية وتجذب عملاءك المستهدفين</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M4 16C4 14.8954 4.89543 14 6 14H42C43.1046 14 44 14.8954 44 16V18H4V16Z" fill="currentColor"/>
+                            <circle cx="10" cy="16" r="1" fill="white"/>
+                            <circle cx="14" cy="16" r="1" fill="white"/>
+                            <circle cx="18" cy="16" r="1" fill="white"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">تصميم المواقع</h3>
+                    <p class="service-description">
+                        نصمم مواقع إلكترونية احترافية ومتجاوبة تعكس هوية علامتك التجارية وتجذب عملاءك المستهدفين بتصاميم عصرية
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ تصميم responsive متكامل</li>
+                        <li>✓ تجربة مستخدم UX/UI</li>
+                        <li>✓ تحسين SEO</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>تطوير التطبيقات</h3>
-                    <p>نطور تطبيقات ويب متقدمة باستخدام أحدث التقنيات لضمان الأداء العالي والأمان الكامل</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <rect x="12" y="6" width="24" height="36" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <path d="M18 30L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="24" cy="36" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">تطبيقات الجوال</h3>
+                    <p class="service-description">
+                        تطوير تطبيقات جوال متميزة لأنظمة iOS وAndroid تعزز من تفاعل عملائك مع علامتك التجارية بتجربة سلسة
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ تطبيقات Native</li>
+                        <li>✓ React Native / Flutter</li>
+                        <li>✓ نشر على المتاجر</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>التسويق الرقمي</h3>
-                    <p>نساعدك في الوصول إلى جمهورك المستهدف من خلال استراتيجيات تسويق رقمية فعالة ومدروسة</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 4L6 14V22C6 31 13 39 24 44C35 39 42 31 42 22V14L24 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M24 18V28M24 34H24.02" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">حلول أمنية</h3>
+                    <p class="service-description">
+                        نوفر أعلى معايير الأمان لحماية بياناتك ومعلومات عملائك مع حلول متقدمة للحماية السيبرانية والنسخ الاحتياطي
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ SSL & HTTPS</li>
+                        <li>✓ حماية من الاختراق</li>
+                        <li>✓ نسخ احتياطي تلقائي</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>تطبيقات الجوال</h3>
-                    <p>تطوير تطبيقات جوال متميزة لأنظمة iOS وAndroid تعزز من تفاعل عملائك مع علامتك التجارية</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 12V24L32 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">التسويق الرقمي</h3>
+                    <p class="service-description">
+                        نساعدك في الوصول إلى جمهورك المستهدف من خلال استراتيجيات تسويق رقمية فعالة عبر جميع القنوات الرقمية
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ إدارة وسائل التواصل</li>
+                        <li>✓ إعلانات مدفوعة</li>
+                        <li>✓ تحليلات وتقارير</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🛒</div>
-                    <h3>المتاجر الإلكترونية</h3>
-                    <p>إنشاء متاجر إلكترونية احترافية مع أنظمة دفع آمنة وإدارة مخزون متقدمة لزيادة مبيعاتك</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M8 12C8 9.79086 9.79086 8 12 8H36C38.2091 8 40 9.79086 40 12V36C40 38.2091 38.2091 40 36 40H12C9.79086 40 8 38.2091 8 36V12Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 20H32M16 28H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">المتاجر الإلكترونية</h3>
+                    <p class="service-description">
+                        إنشاء متاجر إلكترونية احترافية مع أنظمة دفع آمنة وإدارة مخزون متقدمة لزيادة مبيعاتك وتوسيع نطاق عملك
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ WooCommerce / Shopify</li>
+                        <li>✓ بوابات دفع متعددة</li>
+                        <li>✓ إدارة المخزون</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>الصيانة والدعم</h3>
-                    <p>نوفر خدمات صيانة ودعم فني مستمر لضمان عمل موقعك أو تطبيقك بكفاءة عالية على مدار الساعة</p>
+                <div class="service-card card-animated">
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path d="M24 40C32.8366 40 40 32.8366 40 24C40 15.1634 32.8366 8 24 8C15.1634 8 8 15.1634 8 24C8 32.8366 15.1634 40 24 40Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M24 16V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">الصيانة والدعم</h3>
+                    <p class="service-description">
+                        نوفر خدمات صيانة ودعم فني مستمر لضمان عمل موقعك أو تطبيقك بكفاءة عالية على مدار الساعة مع استجابة سريعة
+                    </p>
+                    <ul class="service-features">
+                        <li>✓ دعم 24/7</li>
+                        <li>✓ تحديثات دورية</li>
+                        <li>✓ حل المشاكل الفنية</li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-outline"><span>المزيد من الخدمات</span></a>
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-outline btn-large">
+                    <span>اكتشف جميع الخدمات</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
+    <section class="stats-section">
+        <div class="stats-background"></div>
         <div class="container">
-            <div class="section-title">
-                <h2 style="color: white;">أرقامنا تتحدث عنا</h2>
-                <p style="color: rgba(255,255,255,0.8);">إنجازات نفتخر بها</p>
+            <div class="section-header text-white">
+                <span class="section-badge badge-light">إنجازاتنا</span>
+                <h2 class="section-title text-white">أرقامنا تتحدث عنا</h2>
+                <p class="section-description text-white-80">نتائج ملموسة نفتخر بتحقيقها</p>
             </div>
 
             <div class="stats-grid">
-                <div class="stat-item">
+                <div class="stat-card">
+                    <div class="stat-icon">📊</div>
                     <div class="stat-number" data-target="150">0</div>
                     <div class="stat-label">مشروع ناجح</div>
+                    <div class="stat-bar"></div>
                 </div>
 
-                <div class="stat-item">
+                <div class="stat-card">
+                    <div class="stat-icon">😊</div>
                     <div class="stat-number" data-target="100">0</div>
                     <div class="stat-label">عميل راضٍ</div>
+                    <div class="stat-bar"></div>
                 </div>
 
-                <div class="stat-item">
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
                     <div class="stat-number" data-target="7">0</div>
                     <div class="stat-label">سنوات خبرة</div>
+                    <div class="stat-bar"></div>
                 </div>
 
-                <div class="stat-item">
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
                     <div class="stat-number" data-target="98">0</div>
                     <div class="stat-label">نسبة الرضا %</div>
+                    <div class="stat-bar"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Preview -->
-    <section id="portfolio">
+    <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <div class="section-title">
-                <h2>أحدث أعمالنا</h2>
-                <p>استعرض مجموعة من المشاريع التي أنجزناها بنجاح</p>
+            <div class="section-header">
+                <span class="section-badge">أعمالنا</span>
+                <h2 class="section-title">مشاريع نفتخر بها</h2>
+                <p class="section-description">استعرض مجموعة من المشاريع التي أنجزناها بنجاح</p>
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <div style="width:100%;height:100%;background:linear-gradient(135deg, #1a4d3e 0%, #2d6a4f 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">🏢</div>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #1a5c47 0%, #2d8b6e 100%);">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <rect x="15" y="20" width="50" height="40" rx="4" stroke="white" stroke-width="3"/>
+                                <path d="M15 28H65M23 24V28M31 24V28M39 24V28" stroke="white" stroke-width="3"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">عرض المشروع →</a>
+                        </div>
                     </div>
                     <div class="portfolio-content">
-                        <div class="portfolio-category">تطوير مواقع</div>
-                        <h3>موقع شركة التقنية الحديثة</h3>
-                        <p>موقع إلكتروني احترافي لشركة تقنية متخصصة في تطوير البرمجيات</p>
+                        <span class="portfolio-category">تطوير مواقع</span>
+                        <h3 class="portfolio-title">موقع شركة التقنية الحديثة</h3>
+                        <p class="portfolio-description">
+                            موقع إلكتروني احترافي لشركة تقنية متخصصة في تطوير البرمجيات مع لوحة تحكم متقدمة
+                        </p>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <div style="width:100%;height:100%;background:linear-gradient(135deg, #ff8c42 0%, #ff6b35 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">🛍️</div>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #ff7b3d 0%, #ff6b35 100%);">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <path d="M40 20L20 35V60H32V48H48V60H60V35L40 20Z" stroke="white" stroke-width="3" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">عرض المشروع →</a>
+                        </div>
                     </div>
                     <div class="portfolio-content">
-                        <div class="portfolio-category">متاجر إلكترونية</div>
-                        <h3>متجر الأزياء العصرية</h3>
-                        <p>متجر إلكتروني احترافي للأزياء مع نظام دفع متكامل</p>
+                        <span class="portfolio-category">متاجر إلكترونية</span>
+                        <h3 class="portfolio-title">متجر الأزياء العصرية</h3>
+                        <p class="portfolio-description">
+                            متجر إلكتروني احترافي للأزياء مع نظام دفع متكامل وإدارة مخزون ذكية
+                        </p>
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <div style="width:100%;height:100%;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:3rem;">📊</div>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                <rect x="20" y="15" width="40" height="50" rx="3" stroke="white" stroke-width="3"/>
+                                <path d="M28 25H52M28 35H52M28 45H42" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link">عرض المشروع →</a>
+                        </div>
                     </div>
                     <div class="portfolio-content">
-                        <div class="portfolio-category">تطبيقات ويب</div>
-                        <h3>تطبيق إدارة المشاريع</h3>
-                        <p>منصة ويب احترافية لإدارة المشاريع والفرق</p>
+                        <span class="portfolio-category">تطبيقات ويب</span>
+                        <h3 class="portfolio-title">تطبيق إدارة المشاريع</h3>
+                        <p class="portfolio-description">
+                            منصة ويب احترافية لإدارة المشاريع والفرق مع أدوات تعاون متقدمة
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-4">
-                <a href="portfolio.html" class="btn btn-primary"><span>عرض جميع الأعمال</span></a>
+            <div class="text-center mt-5">
+                <a href="portfolio.html" class="btn btn-primary btn-large">
+                    <span>عرض جميع الأعمال</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="bg-light">
-        <div class="container text-center">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">هل أنت مستعد للبدء؟</h2>
-            <p style="font-size: 1.25rem; color: var(--text-gray); margin-bottom: 2rem;">دعنا نساعدك في تحقيق أهدافك الرقمية</p>
-            <a href="contact.html" class="btn btn-primary" style="margin-left: 1rem;"><span>تواصل معنا</span></a>
-            <a href="portfolio.html" class="btn btn-outline"><span>استعرض أعمالنا</span></a>
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-icon">✨</div>
+                <h2 class="cta-title">هل أنت مستعد للبدء؟</h2>
+                <p class="cta-description">دعنا نساعدك في تحويل أفكارك إلى واقع رقمي ناجح</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span>تواصل معنا الآن</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="portfolio.html" class="btn btn-outline-white btn-large">
+                        <span>استعرض أعمالنا</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>نسق</h3>
-                    <p>نقدم حلولاً رقمية متكاملة تساعد الشركات على النمو والتميز في العالم الرقمي</p>
+                    <div class="footer-logo">
+                        <span class="logo-icon">⬡</span>
+                        <span class="logo-text">نسق</span>
+                    </div>
+                    <p class="footer-description">
+                        نقدم حلولاً رقمية متكاملة تساعد الشركات على النمو والتميز في العالم الرقمي
+                    </p>
                     <div class="social-links">
-                        <a href="#" class="social-link">📘</a>
-                        <a href="#" class="social-link">🐦</a>
-                        <a href="#" class="social-link">📷</a>
-                        <a href="#" class="social-link">💼</a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C4.477 0 0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.879V12.89h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.989C16.343 19.129 20 14.99 20 10c0-5.523-4.477-10-10-10z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 0C7.284 0 6.944.012 5.877.06 4.813.11 4.086.278 3.45.525a4.897 4.897 0 00-1.772 1.153A4.902 4.902 0 00.525 3.45C.278 4.086.109 4.813.06 5.877.012 6.944 0 7.284 0 10s.012 3.056.06 4.123c.05 1.064.218 1.791.465 2.427a4.902 4.902 0 001.153 1.772 4.897 4.897 0 001.772 1.153c.636.247 1.363.416 2.427.465C6.944 19.988 7.284 20 10 20s3.056-.012 4.123-.06c1.064-.05 1.791-.218 2.427-.465a4.897 4.897 0 001.772-1.153 4.902 4.902 0 001.153-1.772c.247-.636.416-1.363.465-2.427.048-1.067.06-1.407.06-4.123s-.012-3.056-.06-4.123c-.05-1.064-.218-1.791-.465-2.427a4.902 4.902 0 00-1.153-1.772A4.897 4.897 0 0016.55.525C15.914.278 15.187.109 14.123.06 13.056.012 12.716 0 10 0zm0 1.802c2.67 0 2.986.01 4.04.058.976.045 1.505.207 1.858.344.466.182.8.399 1.15.748.35.35.566.684.748 1.15.137.353.3.882.344 1.857.048 1.055.058 1.37.058 4.041 0 2.67-.01 2.986-.058 4.04-.045.976-.207 1.505-.344 1.858a3.097 3.097 0 01-.748 1.15c-.35.35-.684.566-1.15.748-.353.137-.882.3-1.857.344-1.054.048-1.37.058-4.041.058-2.67 0-2.987-.01-4.04-.058-.976-.045-1.505-.207-1.858-.344a3.098 3.098 0 01-1.15-.748 3.098 3.098 0 01-.748-1.15c-.137-.353-.3-.882-.344-1.857-.048-1.055-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.045-.976.207-1.505.344-1.858.182-.466.399-.8.748-1.15.35-.35.684-.566 1.15-.748.353-.137.882-.3 1.857-.344 1.055-.048 1.37-.058 4.041-.058zM10 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M18.667 0H1.333C.597 0 0 .597 0 1.333v17.334C0 19.403.597 20 1.333 20h17.334c.736 0 1.333-.597 1.333-1.333V1.333C20 .597 19.403 0 18.667 0zM6.004 17.004H3.002V7.501h3.002v9.503zM4.503 6.252a1.752 1.752 0 110-3.504 1.752 1.752 0 010 3.504zm12.501 10.752h-3.002v-4.627c0-1.103-.022-2.521-1.536-2.521-1.538 0-1.774 1.201-1.774 2.442v4.706H7.69V7.501h2.881v1.298h.041c.401-.759 1.381-1.559 2.843-1.559 3.042 0 3.605 2.003 3.605 4.608v5.156z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
 
                 <div class="footer-section">
-                    <h3>روابط سريعة</h3>
-                    <p><a href="index.html">الرئيسية</a></p>
-                    <p><a href="about.html">من نحن</a></p>
-                    <p><a href="services.html">الخدمات</a></p>
-                    <p><a href="portfolio.html">أعمالنا</a></p>
-                    <p><a href="contact.html">تواصل معنا</a></p>
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="portfolio.html">أعمالنا</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h3>تواصل معنا</h3>
-                    <p>📞 +966 50 123 4567</p>
-                    <p>✉️ info@nasqe.com</p>
-                    <p>📍 الرياض، المملكة العربية السعودية</p>
+                    <h3 class="footer-title">خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#web-design">تصميم المواقع</a></li>
+                        <li><a href="services.html#mobile-apps">تطبيقات الجوال</a></li>
+                        <li><a href="services.html#ecommerce">المتاجر الإلكترونية</a></li>
+                        <li><a href="services.html#marketing">التسويق الرقمي</a></li>
+                        <li><a href="services.html#support">الصيانة والدعم</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328z"/>
+                            </svg>
+                            <span dir="ltr">+966 50 123 4567</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                            </svg>
+                            <span>info@nasqe.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                            </svg>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>© 2024 نسق. جميع الحقوق محفوظة</p>
+                <div class="footer-bottom-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <span>•</span>
+                    <a href="#">شروط الاستخدام</a>
+                </div>
             </div>
         </div>
     </footer>
