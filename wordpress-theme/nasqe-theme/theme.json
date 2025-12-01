@@ -9,63 +9,118 @@
       "defaultGradients": false,
       "palette": [
         {
-          "slug": "primary-dark-green",
-          "color": "#1a4d3e",
-          "name": "أخضر داكن رئيسي"
-        },
-        {
-          "slug": "primary-green",
-          "color": "#2d6a4f",
+          "slug": "primary",
+          "color": "#1a5c47",
           "name": "أخضر رئيسي"
         },
         {
-          "slug": "secondary-orange",
-          "color": "#ff8c42",
+          "slug": "primary-light",
+          "color": "#2d8b6e",
+          "name": "أخضر فاتح"
+        },
+        {
+          "slug": "primary-dark",
+          "color": "#0f3d2e",
+          "name": "أخضر داكن"
+        },
+        {
+          "slug": "secondary",
+          "color": "#ff7b3d",
           "name": "برتقالي ثانوي"
         },
         {
-          "slug": "bg-light",
-          "color": "#f8f9fa",
-          "name": "خلفية فاتحة"
+          "slug": "secondary-light",
+          "color": "#ff9561",
+          "name": "برتقالي فاتح"
         },
         {
-          "slug": "text-dark",
-          "color": "#1a1a1a",
-          "name": "نص داكن"
-        },
-        {
-          "slug": "text-gray",
-          "color": "#6b7280",
-          "name": "نص رمادي"
-        },
-        {
-          "slug": "border-gray",
-          "color": "#e5e7eb",
-          "name": "حدود رمادية"
+          "slug": "accent",
+          "color": "#ffc947",
+          "name": "ذهبي مميز"
         },
         {
           "slug": "white",
           "color": "#ffffff",
           "name": "أبيض"
+        },
+        {
+          "slug": "gray-50",
+          "color": "#f9fafb",
+          "name": "رمادي 50"
+        },
+        {
+          "slug": "gray-100",
+          "color": "#f3f4f6",
+          "name": "رمادي 100"
+        },
+        {
+          "slug": "gray-200",
+          "color": "#e5e7eb",
+          "name": "رمادي 200"
+        },
+        {
+          "slug": "gray-500",
+          "color": "#6b7280",
+          "name": "رمادي 500"
+        },
+        {
+          "slug": "gray-600",
+          "color": "#4b5563",
+          "name": "رمادي 600"
+        },
+        {
+          "slug": "gray-700",
+          "color": "#374151",
+          "name": "رمادي 700"
+        },
+        {
+          "slug": "gray-800",
+          "color": "#1f2937",
+          "name": "رمادي 800"
+        },
+        {
+          "slug": "gray-900",
+          "color": "#111827",
+          "name": "رمادي 900"
         }
       ],
       "gradients": [
         {
           "slug": "primary-gradient",
-          "gradient": "linear-gradient(135deg, #1a4d3e 0%, #2d6a4f 100%)",
+          "gradient": "linear-gradient(135deg, #1a5c47 0%, #2d8b6e 100%)",
           "name": "تدرج رئيسي"
         },
         {
+          "slug": "primary-gradient-reverse",
+          "gradient": "linear-gradient(135deg, #2d8b6e 0%, #1a5c47 100%)",
+          "name": "تدرج رئيسي معكوس"
+        },
+        {
           "slug": "hero-gradient",
-          "gradient": "linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%)",
+          "gradient": "linear-gradient(180deg, #f9fafb 0%, #ffffff 100%)",
           "name": "تدرج البطل"
+        },
+        {
+          "slug": "text-gradient",
+          "gradient": "linear-gradient(135deg, #1a5c47, #2d8b6e, #ff7b3d)",
+          "name": "تدرج النص"
+        },
+        {
+          "slug": "dark-gradient",
+          "gradient": "linear-gradient(135deg, #111827, #1f2937)",
+          "name": "تدرج داكن"
+        },
+        {
+          "slug": "footer-gradient",
+          "gradient": "linear-gradient(180deg, #111827 0%, #1f2937 100%)",
+          "name": "تدرج التذييل"
         }
       ]
     },
     "typography": {
       "fontFamilies": [
         {
-          "fontFamily": "'Cairo', sans-serif",
+          "fontFamily": "'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
           "slug": "cairo",
           "name": "القاهرة"
         }
@@ -77,31 +132,48 @@
           "name": "صغير"
         },
         {
-          "slug": "medium",
+          "slug": "base",
           "size": "1rem",
+          "name": "أساسي"
+        },
+        {
+          "slug": "medium",
+          "size": "1.0625rem",
           "name": "متوسط"
         },
         {
           "slug": "large",
-          "size": "1.125rem",
+          "size": "1.25rem",
           "name": "كبير"
         },
         {
-          "slug": "x-large",
+          "slug": "xl",
           "size": "1.5rem",
           "name": "كبير جداً"
         },
         {
-          "slug": "xx-large",
+          "slug": "2xl",
           "size": "2rem",
           "name": "ضخم"
         },
         {
-          "slug": "xxx-large",
+          "slug": "3xl",
           "size": "2.5rem",
           "name": "ضخم جداً"
+        },
+        {
+          "slug": "4xl",
+          "size": "3.5rem",
+          "name": "عملاق"
+        },
+        {
+          "slug": "5xl",
+          "size": "4.5rem",
+          "name": "عملاق جداً"
         }
-      ]
+      ],
+      "fontWeight": true,
+      "lineHeight": true
     },
     "spacing": {
       "units": ["px", "em", "rem", "vh", "vw", "%"],
@@ -109,34 +181,49 @@
       "margin": true,
       "spacingSizes": [
         {
-          "slug": "30",
+          "slug": "20",
           "size": "0.5rem",
-          "name": "1"
+          "name": "صغير جداً"
+        },
+        {
+          "slug": "30",
+          "size": "1rem",
+          "name": "صغير"
         },
         {
           "slug": "40",
-          "size": "1rem",
-          "name": "2"
+          "size": "1.5rem",
+          "name": "متوسط صغير"
         },
         {
           "slug": "50",
-          "size": "1.5rem",
-          "name": "3"
+          "size": "2rem",
+          "name": "متوسط"
         },
         {
           "slug": "60",
-          "size": "2rem",
-          "name": "4"
+          "size": "2.5rem",
+          "name": "متوسط كبير"
         },
         {
           "slug": "70",
           "size": "3rem",
-          "name": "5"
+          "name": "كبير"
         },
         {
           "slug": "80",
+          "size": "4rem",
+          "name": "كبير جداً"
+        },
+        {
+          "slug": "90",
           "size": "5rem",
-          "name": "6"
+          "name": "ضخم"
+        },
+        {
+          "slug": "100",
+          "size": "7rem",
+          "name": "ضخم جداً"
         }
       ]
     },
@@ -148,19 +235,31 @@
       "spacing": {
         "small": "1rem",
         "medium": "2rem",
-        "large": "3rem"
+        "large": "4rem",
+        "xlarge": "7rem"
+      },
+      "shadow": {
+        "xs": "0 1px 2px rgba(0, 0, 0, 0.05)",
+        "sm": "0 2px 8px rgba(0, 0, 0, 0.08)",
+        "md": "0 4px 16px rgba(0, 0, 0, 0.1)",
+        "lg": "0 8px 24px rgba(0, 0, 0, 0.12)",
+        "xl": "0 12px 40px rgba(0, 0, 0, 0.15)"
+      },
+      "transition": {
+        "base": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        "slow": "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)"
       }
     }
   },
   "styles": {
     "color": {
       "background": "var(--wp--preset--color--white)",
-      "text": "var(--wp--preset--color--text-dark)"
+      "text": "var(--wp--preset--color--gray-800)"
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--cairo)",
-      "fontSize": "var(--wp--preset--font-size--medium)",
-      "lineHeight": "1.6"
+      "fontSize": "var(--wp--preset--font-size--base)",
+      "lineHeight": "1.7"
     },
     "spacing": {
       "padding": {
@@ -173,66 +272,66 @@
     "elements": {
       "button": {
         "color": {
-          "background": "var(--wp--preset--color--primary-dark-green)",
+          "background": "var(--wp--preset--gradient--primary-gradient)",
           "text": "var(--wp--preset--color--white)"
         },
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--cairo)",
           "fontSize": "var(--wp--preset--font-size--medium)",
-          "fontWeight": "600"
+          "fontWeight": "700"
         },
         "border": {
-          "radius": "0.5rem"
+          "radius": "0.875rem"
         },
         "spacing": {
           "padding": {
             "top": "1rem",
-            "right": "2rem",
+            "right": "2.5rem",
             "bottom": "1rem",
-            "left": "2rem"
+            "left": "2.5rem"
           }
         },
         ":hover": {
           "color": {
-            "background": "var(--wp--preset--color--primary-green)"
+            "background": "var(--wp--preset--gradient--primary-gradient-reverse)"
           }
         }
       },
       "heading": {
         "typography": {
           "fontFamily": "var(--wp--preset--font-family--cairo)",
-          "fontWeight": "700",
-          "lineHeight": "1.3"
+          "fontWeight": "800",
+          "lineHeight": "1.2"
         },
         "color": {
-          "text": "var(--wp--preset--color--text-dark)"
+          "text": "var(--wp--preset--color--gray-900)"
         }
       },
       "h1": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xxx-large)",
-          "fontWeight": "800"
+          "fontSize": "var(--wp--preset--font-size--5xl)",
+          "fontWeight": "900"
         }
       },
       "h2": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--xx-large)",
-          "fontWeight": "700"
+          "fontSize": "var(--wp--preset--font-size--4xl)",
+          "fontWeight": "900"
         }
       },
       "h3": {
         "typography": {
-          "fontSize": "var(--wp--preset--font-size--x-large)",
-          "fontWeight": "700"
+          "fontSize": "var(--wp--preset--font-size--2xl)",
+          "fontWeight": "800"
         }
       },
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--primary-dark-green)"
+          "text": "var(--wp--preset--color--primary)"
         },
         ":hover": {
           "color": {
-            "text": "var(--wp--preset--color--primary-green)"
+            "text": "var(--wp--preset--color--primary-light)"
           }
         }
       }
@@ -243,16 +342,17 @@
           "outline": {
             "color": {
               "background": "transparent",
-              "text": "var(--wp--preset--color--primary-dark-green)"
+              "text": "var(--wp--preset--color--primary)"
             },
             "border": {
-              "color": "var(--wp--preset--color--primary-dark-green)",
+              "color": "var(--wp--preset--color--primary)",
               "width": "2px",
-              "style": "solid"
+              "style": "solid",
+              "radius": "0.875rem"
             },
             ":hover": {
               "color": {
-                "background": "var(--wp--preset--color--primary-dark-green)",
+                "background": "var(--wp--preset--color--primary)",
                 "text": "var(--wp--preset--color--white)"
               }
             }
@@ -266,6 +366,16 @@
             "right": "2rem",
             "bottom": "2rem",
             "left": "2rem"
+          }
+        }
+      },
+      "core/columns": {
+        "spacing": {
+          "padding": {
+            "top": "0",
+            "right": "0",
+            "bottom": "0",
+            "left": "0"
           }
         }
       }

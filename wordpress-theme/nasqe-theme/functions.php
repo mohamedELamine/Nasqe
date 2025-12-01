@@ -79,6 +79,9 @@ function nasqe_enqueue_scripts() {
     // تحميل ملف الأنماط المخصص
     wp_enqueue_style('nasqe-custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.0.0');
 
+    // تحميل ملف الأنماط الحديثة (Modern Design)
+    wp_enqueue_style('nasqe-modern', get_template_directory_uri() . '/assets/css/modern-style.css', array(), '2.0.0');
+
     // تحميل ملف الأنيميشن والتأثيرات
     wp_enqueue_style('nasqe-animations', get_template_directory_uri() . '/assets/css/animations.css', array(), '1.0.0');
 
